@@ -1,0 +1,21 @@
+Common Workspace
+	Low Fidelity
+	High Fidelity
+	Report
+	Documents
+Private Workspaces
+	Ranul
+		..
+	Lahiru
+		..
+	Nidula
+		..
+	Ishan
+		..
+	Ryan
+		..
+
+
+
+# PUBLISH ONLY PDF COPIES OF DIAGRAMS AND USE ONLY HTML, CSS/SCSS AND JS FOR FINAL PROTOTYPE.
+# DOWNLOADED REQUIRED LIBRARIES AND PUT THEM TO COMMON WORKSPACE. i.e: Bootstrap, Google Fonts
