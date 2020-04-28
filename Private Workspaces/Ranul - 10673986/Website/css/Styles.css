@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background: rgb(130,190,231);
+	background: linear-gradient(90deg, rgba(130,190,231,1) 0%, rgba(152,202,236,1) 70%, rgba(54,149,214,1) 100%);
+}
+.WelcomeText{
+	color: white;
+	text-align: center;
+	margin-top: 10%;
+}
+.NavigationbtnBar{
+	text-align: center;
+	margin: 5%
+}
+a { text-decoration: none; }
+
+.navbtn{
+	background-color:#ffffff;
+	border-radius:28px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:14px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	color: #419BD8;
+}
+
+.navbtn:hover {
+	color: white;
+	background-color:#419BD8;
+}
+
+.navbtn:active {
+	position:relative;
+	top:1px;
+}
+
+.footer{
+	position: fixed;
+	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	text-align: center;
+}
+
