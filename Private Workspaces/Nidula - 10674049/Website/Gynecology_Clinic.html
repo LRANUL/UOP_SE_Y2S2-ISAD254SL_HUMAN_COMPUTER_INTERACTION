@@ -1,0 +1,225 @@
+
+<script src="../../../common Workspace/Website/js/jquery-3.4.1.min.js"></script>
+<script src="../../../common Workspace/Website/js/bootstrap.min.js"></script>
+
+<script>
+jQuery(function($)
+ { 
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCFfCdAIhkH0DXw5RqBXx2vasksmR_5bOc&callback=initialize";
+    document.body.appendChild(script);
+});
+
+function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        mapTypeId: 'roadmap'
+    };
+                    
+    map = new google.maps.Map(document.getElementById("clinics"), mapOptions);
+    map.setTilt(45);
+        
+    var markers = [
+        ['Base Hospital Horana', 6.710545, 80.066631],
+        ['Family Clinic', 6.042521, 80.207290],
+        ['Nawinna Medicare Hospitals (Pvt) Ltd', 6.854825, 79.914277],
+        ['Royal Hospital', 6.875981, 79.863831],
+        ['New Delmon Hospital - Wellawatte', 6.870966, 79.861830],
+        ['Sri Lanka Air Force Hospital, Dental Unit, Colombo', 6.921655, 79.885490 ],
+        ['Hemas Hospital, Thalawathugoda', 6.878437, 79.935344]
+    ];
+                        
+   
+    var infoWindowContent = [
+        ['<div class="info_content">' +
+        '<h3>Base Hospital Horana</h3>' +
+        '<p>The Base hospital Horana is known to have a good Gynecology clinic mainly because they have the needed equipment and good staff to help the patient with there needs</p>' + '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Family Clinic</h3>' +
+        '<p>Family clinic provide clinics facility to patients with Gynecology medical conditions. The family clinic is known to have helped a lot of people i the area but they need to imporove the service they provide</p>' +'</div>'],
+         ['<div class="info_content">' +
+        '<h3>Nawinna Medicare Hospitals (Pvt) Ltd</h3>' +
+        '<p>This hospital has more than two decades of tradition, excellence and quality in providing medical care in a comfortable and convenient environment, and there clinics is known to be one of the best in the country.</p>' + '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Royal Hospital</h3>' +
+        '<p> Royal hospital is one of the private hospital and they also have one of the best private clinics in the area and has helped lot of people in the area. They are the mainly kown to be good because of the medical service and they also contain all the equipment needed</p>' + '</div>'],
+         ['<div class="info_content">' +
+        '<h3>New Delmon Hospital - Wellawatte</h3>' +
+        '<p>The New Delmon is one of the good private hospitals in the country and there clinics is known to be good. They have helped a lot of people with Gynecology medical conditions and has been a major asset to the people in the area.</p>' + '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Sri Lanka Air Force Hospital, Dental Unit, Colombo</h3>' +
+        '<p>This hospital is located in the heart of colombo and is known to be one of the best hospital in the area and has known to have a good medical service and has a fair price for the medical services provided so this hospital has become the choice which patients vist to get treatment</p>' + '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Hemas Hospital, Thalawathugoda</h3>' +
+        '<p>This hospital is appreatiated for the service they provide and the good staff who help the patients needs. because of this the hospital is is well known in the area and has become the people choice to get there medical conditions treated or for clinic purposes </p>' + '</div>']
+    ];
+        
+
+    var infoWindow = new google.maps.InfoWindow(), marker, g;
+    
+   
+    for( g = 0; g < markers.length; g++ ) {
+        var position = new google.maps.LatLng(markers[g][1], markers[g][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[g][0]
+        });
+        
+       
+        google.maps.event.addListener(marker, 'click', (function(marker, g) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[g][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, g));
+
+      
+        map.fitBounds(bounds);
+    }
+   
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(9);
+        google.maps.event.removeListener(boundsListener);
+    });
+    
+}
+</script>
+<html>
+<head>
+	<title>Gynecology Clinic </title>
+		<link rel="stylesheet" type="text/css" href=" ../../../common Workspace/Website/css/bootstrap-4.4.1.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			.sidebar {
+ 
+            width: 200px;
+            background-color: #f1f1f1;
+            position: absolute;
+            height: 100%;
+            overflow: auto;
+            text-align: center;
+           }
+
+           .sidebar a {
+           display: block;
+           color: black;
+           text-decoration: none;
+           }
+ 
+           .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+
+            div.content {
+             margin-left: 200px;
+             }
+
+            .checked {
+             color: orange;
+            }
+
+           @media screen and (max-width: 700px) {
+           .sidebar {
+           width: 100%;
+           height: auto;
+           position: relative;
+           }
+           .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+           }
+
+           @media screen and (max-width: 400px) {
+           .sidebar a {
+           text-align: center;
+           float: none;
+           }
+           }
+		</style>
+</head>
+<body>
+<div>
+	<h2 class=" pb-5 pt-5 w-100" style=" text-align: center; background-color: lightblue;"> Gynecology Clinic</h2>
+</div>
+<div class="sidebar">
+	<div>
+		<button class="btn" onclick=""><h6>Base Hospital Horana</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+	</div>
+	<hr>
+	<div>
+		<button class="btn" onclick=""><h6>Family Clinic</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+	</div>
+	<hr>
+	<div>
+		<button class="btn "><h6>Nawinna Medicare Hospitals (Pvt) Ltd</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+	</div>
+	<hr>
+	<div>
+		<button class="btn "><h6>Royal Hospital</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+         <span class="fa fa-star checked"></span></p>
+	</div>
+	<hr>
+	<div>
+		<button class="btn "><h6>New Delmon Hospital - Wellawatte</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+         <span class="fa fa-star"></span></p>
+	</div>
+	<hr>
+	<div>
+		<button class="btn"><h6>Sri Lanka Air Force Hospital, Dental Unit, Colombo</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+         <span class="fa fa-star"></span></p>
+	</div>
+	<hr>
+	<div>
+		<button class="btn"><h6>Hemas Hospital, Thalawathugoda</h6></button>
+		<p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+	</div>
+</div>
+<div class="content">
+  <div id="clinics" class="mapping" style="width:100%; height: 100%;">
+    </div>
+</div>
+</body>
+</html>
+
