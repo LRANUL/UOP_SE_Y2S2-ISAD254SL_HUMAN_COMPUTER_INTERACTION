@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #header{
+    height: 280px;
+    width: 100%;
+    background-color: #55a5dcff;
+  }
+
+  #headerContent{
+    height: 170px;
+    width: 75%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #headerMenu{
+    height: 130px;
+    width: 100%;
+    background-color: #55a5dcff;
+  }
+
+  .languageSelection{
+    width: 65px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .languageSelection p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #55a5dcff;
+  }
+
+  #languageSelectionEnglish{
+    position: absolute;
+    right: 170px;
+    background-color: #ffffff;
+  }
+
+  #languageSelectionSinhala{
+    position: absolute;
+    right: 90px;
+    background-color: #ffffff;
+  }
+
+  #languageSelectionTamil{
+    position: absolute;
+    right: 10px;
+    background-color: #ffffff;
+  }
+
+  #mainTitle{
+    color: #55a5dcff;
+    background-color: #ffffff;
+    padding: 5px;
+    height: 42px;
+    width: 770px;
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 35px;
+    left: 30px;
+  }
+
+  #searchInput{
+    height: 45px;
+    width: 280px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 120px;
+    top: 55px;
+    border-radius: 25px;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 65px;
+    border: none;
+  }
+
+  /*
+  #searchText{
+    color: rgb(129, 129, 129);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+  */
+
+  #searchButton{
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    right: 10.4%;
+    top: 46%;
+    transform: translateY(-54%);
+    border: none;
+    background-color: #ffffff;
+  }
+
+  #headerMenuBar{
+    position: absolute;
+    bottom: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: #55a5dcff;
+  }
+
+  .menuItem{
+    margin-left: 30px;
+    height: 100%;
+    width: 180px;
+    background-color: #3a95d4ff;
+    float: left;
+    border-radius: none;
+  }
+
+  .menuItem p{
+    text-align: center;
+    position: relative;
+    bottom: 3px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  #menuTileStyle{
+    background-color: #3a95d4ff;
+    border-radius: 0px;
+  }
+
+  .menuItemOther{
+    margin-left: 10px;
+  }
+
+  #menuItemLogin{
+    position: absolute;
+    right: 30px;
+    width: 120px;
+    background-color: #1d679aff;
+    border-radius: 0px;
+  }
+
+  #headerBanner{
+    height: 110px;
+    width: 100%;
+    background-color: #fae94dff;
+  }
+
+  #headerBanner h1{
+    font-size: 30px;
+    font-family: 'Karla', sans-serif;
+    position: absolute;
+    top: 190px;
+    left: 14%;
+  }
+
+  #headerBanner p{
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 100;
+    position: absolute;
+    top: 230px;
+    left: 14%;
+  }
+
+  #footer{
+    height: 60px;
+    width: 100%;
+    background-color: #55a5dcff;
+  }
+
+  #footer h3{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+  }
