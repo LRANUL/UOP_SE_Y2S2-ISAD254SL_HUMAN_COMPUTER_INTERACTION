@@ -1,0 +1,95 @@
+<script>
+
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(6.918293, 79.867890),
+  zoom:8,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:{lat: 6.918293, lng: 79.867890},
+  map: map,
+  animation:google.maps.Animation.BOUNCE
+});
+}
+</script>
+<html>
+<head>
+	<title> National Hospital</title>
+     <link rel="stylesheet" href="../../../common Workspace/Website/css/bootstrap-4.4.1.css">
+</head>
+<body>
+<div >
+		<h2 class=" pb-5 pt-5 w-100" style=" text-align: center; background-color: lightblue;">National Hospital Of Sri Lanka</h2>
+</div>
+<div class=" ml-5 mr-5">
+	<p>
+		The National Hospital situated in Colombo in a 32 acre block of land is the largest teaching hospital in Sri Lanka and the final 
+        referral centre in the country consisting of 3000 beds. it is the training centre for under graduates and post graduate trainees of 
+        the Faculty of Medicine. The nursing training school, Colombo, PBS, and Schools of Radiography, Pharmacy, Cardiograph, 
+        physiotherapy and occupational therapy are also affiliated to the National Hospital. <a href="http://www.nhsl.health.gov.lk">View More</a>
+	</p>
+<div class="row ml-1 pb-3">
+      <div class="card w-75">
+         <div class="card-body">
+           <h5 class="card-title">The Vision</h5>
+            <p class="card-text">Our vission is to be the center of excellence in Health care.</p>
+          </div>
+      </div>
+    </div>
+</div>
+<div class="row justify-content-end mr-5" >
+    <div class="card w-75" >
+        <div class="card-body">
+           <h5 class="card-title" style=" text-align: right;">The Mission</h5>
+           <p class="card-text">
+    	     To elevate the status of the status of the hospital to a modern, leading health care facility and training center by 
+           developing and sustaining the infrastructure and human resource and by creating a patient friendly environment 
+           where patient care.
+           </p>
+        </div>
+     </div>
+</div>
+<div class=" pt-3 ml-5">
+	<h3> Services</h3>
+  <p> 
+    The National Hospital of sri Lanka provide many services for the well fare of it's people, some of those services are :
+  </p>
+	<ul>
+		<li> Clinic Services</li>
+		<li> OPD Services</li>
+		<li> Specialist care services </li>
+		<li> Other Services</li>
+	</ul>
+</div>
+
+<div class="row justify-content-between ml-5 pb-3">
+	<div class="col-4">
+    <h3> Location</h3>
+		<div id="googleMap" style="width:240%;height:400px;">
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFfCdAIhkH0DXw5RqBXx2vasksmR_5bOc&callback=myMap"></script>
+		</div>
+	</div>
+	<div class="col-3 mr-4" style=" padding-top: 100px; text-align: center;">
+		<h3 class="pl-5"> Contact Details</h3>
+		<p>
+			<ol>
+				National Hospital : +9411-2691111
+			</ol>
+			<ol>
+				Inquiries : +9411-2693510
+			</ol>
+			<ol>
+				Accident Service : +9411-2691111
+			</ol>
+			<ol>
+				Fax : +9411-2698443
+			</ol>
+		</p>
+	</div>
+</div>
+<script src="../../../common Workspace/Website/js/jquery-3.4.1.min.js"></script>
+<script src="../../../common Workspace/Website/js/bootstrap.min.js"></script>
+</body>
+</html>
