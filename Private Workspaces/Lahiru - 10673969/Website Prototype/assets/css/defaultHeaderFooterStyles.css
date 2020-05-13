@@ -135,6 +135,7 @@
     font-family: 'Heebo', sans-serif;
     font-size: 20px;
     color: #ffffff;
+    letter-spacing: 1.5px;
   }
 
   #menuTileStyle{
@@ -152,6 +153,7 @@
     width: 120px;
     background-color: #1d679aff;
     border-radius: 0px;
+    letter-spacing: 3px;
   }
 
   #headerBanner{

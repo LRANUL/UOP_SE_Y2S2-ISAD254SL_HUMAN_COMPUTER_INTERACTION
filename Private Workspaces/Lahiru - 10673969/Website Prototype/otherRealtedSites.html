@@ -9,11 +9,11 @@
 
     <!-- Importing styles for default header and footer sections -->
     <link rel="stylesheet" type="text/css" href="assets/css/defaultHeaderFooterStyles.css">
-    <!-- Importing files necessary for bootstrap from local -->
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap/bootstrap-4.4.1.css">
-    <script src="assets/bootstrap/jquery.min.js"></script>
-    <script src="assets/bootstrap/popper.min.js"></script>
-    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <!-- Importing files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <script src="assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
     <!-- Importing google fonts from online -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   </head>
@@ -56,7 +56,7 @@
             <button class="menuItem menuItemOther btn" id="menuTileStyle">
               <p>Contact</p>
             </button>
-            <button class="menuItem btn" id="menuItemLogin" id="menuTileStyle">
+            <button class="menuItem btn" id="menuItemLogin">
               <p>LOGIN</p>
             </button>
           </div>
@@ -141,7 +141,7 @@
 
               .cardSubtileStyle{
                 width: 85%;
-                background-color: #5996ff;
+                background-color: #ffffff;
                 margin-top: 15px;
                 border-radius: 20px;
                 position: relative;
@@ -152,15 +152,23 @@
               .cardSubtileRowStyle{
                 height: 55px;
                 width: 100%;
-                border: none;
-                background-color: #6d6f74;
                 border-bottom: #ffffff 1px solid;
               }
+
+              .btn-outline-secondary{
+                background-color:#646464;
+                color: #ffffff;
+              }
+
+              .btn-outline-secondary:hover{
+                background-color: #ffffff;
+                color: #646464;
+              }
+
 
               .cardSubtileRowHeading{
                 font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: 19px;
-                color: #ffffff;
                 width: 100%;
                 position: relative;
                 top: 5px;
@@ -271,105 +279,105 @@
                 <div class="collapse cardSubtileStyle" id="cardTile1Subtitle">
                                                                     
                   <!-- CARD TILE 1 - SUBTILE - ROW 1 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.filariasiscampaign.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.filariasiscampaign.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Anti Filariasis Campaigns
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 2 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.leprosycampaign.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.leprosycampaign.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Anti Leprosy Campaigns
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 3 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://amc.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://amc.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Anti Malaria Campaigns
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 4 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.mentalhealth.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.mentalhealth.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Directorate of Mental Health
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 5 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.epid.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.epid.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Epidemiology Unit
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 6 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.familyhealth.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.familyhealth.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Family Health Bureau
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 7 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.hpb.health.gov.lk//', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.hpb.health.gov.lk//', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Health Promotion Bureau
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 8 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=139', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=139', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Ministry of Health Library
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 9 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.dengue.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.dengue.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Dengue Control Unit
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 10 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.aidscontrol.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.aidscontrol.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National STD/AIDS Control Programme
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 11 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.rabies.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.rabies.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Public Health Veterinary Services
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 12 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.nccp.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nccp.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Cancer Control Programme
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 13 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=35', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=35', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Programme for Tuberculosis Control and Chest Diseases
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 14 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.quarantine.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.quarantine.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Quarantine Unit
                     </p>
                   </button>
 
                   <!-- CARD TILE 1 - SUBTILE - ROW 15 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.wkmh.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.wkmh.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Wijaya Kumaratunga Memorial Hospital
                     </p>
@@ -391,133 +399,133 @@
                 <div class="collapse cardSubtileStyle" id="cardTile2Subtitle">
                                                                   
                   <!-- CARD TILE 2 - SUBTILE - ROW 1 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.dental.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.dental.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Dental Services
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 2 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.eohfs.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.eohfs.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Environmental Health, Occupational Health and Food Safety Unit
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 3 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.healthfund.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.healthfund.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Health Development Fund
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 4 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://hiu.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://hiu.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Health Information Unit
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 5 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.lankaphein.com/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.lankaphein.com/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       LANKAPHEIN
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 6 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=139', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=139', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Library of Ministry of Health
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 7 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.mri.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.mri.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Medical Research Institute
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 8 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.migrationhealth.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.migrationhealth.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Migration, Health & Development
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 9 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=148', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=148', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Nutrition Division
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 10 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.nbts.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nbts.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Blood Transfusion Service
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 11 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.ncisl.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.ncisl.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Cancer Institute
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 12 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://nihs.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://nihs.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Institute of Health Sciences
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 13 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.nimh.health.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nimh.health.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Institute of Mental Health
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 14 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.healthfund.gov.lkhttp//203.94.76.60/NPDIC/index.html', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.healthfund.gov.lkhttp//203.94.76.60/NPDIC/index.html', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Poison and Drug Information Centre
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 15 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/enWeb/NCD/index.php', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/enWeb/NCD/index.php', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Non Communicable Diseases Unit
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 16 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.nicslk.com/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nicslk.com/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Intensive Care Surveillance (NICS)
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 17 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.nics-training.com/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nics-training.com/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       NICS – Training
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 18 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.vision2020.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.vision2020.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Vision 2020 - National Programme for Prevention of Blindness
                     </p>
                   </button>
 
                   <!-- CARD TILE 2 - SUBTILE - ROW 19 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=200', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=200', '_blank');">
                     <p class="cardSubtileRowHeading">
                       National Health Development Fund
                     </p>
@@ -539,42 +547,42 @@
                 <div class="collapse cardSubtileStyle" id="cardTile3Subtitle">
                                                                   
                   <!-- CARD TILE 3 - SUBTILE - ROW 1 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Government of SRI LANKA
                     </p>
                   </button>
 
                   <!-- CARD TILE 3 - SUBTILE - ROW 2 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.jica.go.jp/english', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.jica.go.jp/english', '_blank');">
                     <p class="cardSubtileRowHeading">
                       J I C A
                     </p>
                   </button>
 
                   <!-- CARD TILE 3 - SUBTILE - ROW 3 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.phsrc.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.phsrc.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Private Health Services Regulatory Council
                     </p>
                   </button>
 
                   <!-- CARD TILE 3 - SUBTILE - ROW 4 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.unicef.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.unicef.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       U N I C E F
                     </p>
                   </button>
 
                   <!-- CARD TILE 3 - SUBTILE - ROW 5 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.searo.who.int/srilanka//en/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.searo.who.int/srilanka//en/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       WHO - SRI LANKA
                     </p>
                   </button>
 
                   <!-- CARD TILE 3 - SUBTILE - ROW 6 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.who.int/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.who.int/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       World Health Organization
                     </p>
@@ -596,105 +604,105 @@
                 <div class="collapse cardSubtileStyle" id="cardTile4Subtitle">
                                                                     
                   <!-- CARD TILE 4 - SUBTILE - ROW 1 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.slcpsych.lk/site', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.slcpsych.lk/site', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Sri Lanka College of Psychiatrists
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 2 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.cosl.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.cosl.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of Ophthalmologists of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 3 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.impa-lk.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.impa-lk.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Independent Medical Practitioners Association
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 4 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.cmasl.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.cmasl.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of Medical Administrators of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 5 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.hissl.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.hissl.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Health Information Society of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 6 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.fosme.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.fosme.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Sri Lankan Medical Educations
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 7 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.diabetessrilanka.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.diabetessrilanka.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Diabetes Association of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 8 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://slmicrobiology.net/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://slmicrobiology.net/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of Microbiologists
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 9 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.lankasurgeons.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.lankasurgeons.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       The College of Surgeons of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 10 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.collegeofpathologists.com/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.collegeofpathologists.com/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of Pathologists of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 11 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.cgpsl.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.cgpsl.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of General Practitioners of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 12 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.slheart.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.slheart.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Sri Lanka Heart Association
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 13 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.anaesthesia.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.anaesthesia.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of Anaesthesiologists and Intensivist of Sri Lanka
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 14 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.resuslanka.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.resuslanka.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Working Committee on Resuscitation
                     </p>
                   </button>
 
                   <!-- CARD TILE 4 - SUBTILE - ROW 15 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.cfpsl.org/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.cfpsl.org/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       College of Forensic Pathologists of Sri Lanka
                     </p>
@@ -716,14 +724,14 @@
                 <div class="collapse cardSubtileStyle" id="cardTile5Subtitle">
                                                                     
                   <!-- CARD TILE 5 - SUBTILE - ROW 1 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.spmclanka.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.spmclanka.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       Pharmaceuticals Manufacturing
                     </p>
                   </button>
 
                   <!-- CARD TILE 5 - SUBTILE - ROW 2 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.spc.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.spc.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       State Pharmaceuticals Campaign
                     </p>
@@ -745,21 +753,21 @@
                 <div class="collapse cardSubtileStyle" id="cardTile6Subtitle">
                                                                     
                   <!-- CARD TILE 6 - SUBTILE - ROW 1 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.president.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.president.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       www.president.gov.lk
                     </p>
                   </button>
 
                   <!-- CARD TILE 6 - SUBTILE - ROW 2 -->
-                  <button class="cardSubtileRowStyle" onclick="window.open('http://www.pmdnews.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.pmdnews.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       www.pmdnews.lk
                     </p>
                   </button>
 
                   <!-- CARD TILE 6 - SUBTILE - ROW 3 -->
-                  <button class="cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.presidentsoffice.gov.lk/', '_blank');">
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.presidentsoffice.gov.lk/', '_blank');">
                     <p class="cardSubtileRowHeading">
                       www.presidentsoffice.gov.lk
                     </p>

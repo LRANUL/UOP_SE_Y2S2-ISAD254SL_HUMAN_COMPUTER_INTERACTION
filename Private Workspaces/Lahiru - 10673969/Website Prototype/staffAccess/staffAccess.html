@@ -8,14 +8,14 @@
     <title>Information Officers (RTI Act)</title>
 
     <!-- Importing styles for default header and footer sections -->
-    <link rel="stylesheet" type="text/css" href="assets/css/defaultHeaderFooterStyles.css">
+    <link rel="stylesheet" type="text/css" href="./../assets/css/defaultHeaderFooterStyles.css">
     <!-- Importing fontawesome from localhost -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Importing files necessary for bootstrap from localhost -->
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
-    <script src="assets/bootstrap-v4.4.1/js/jquery.min.js"></script>
-    <script src="assets/bootstrap-v4.4.1/js/popper.min.js"></script>
-    <script src="assets/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
     <!-- Importing google fonts from online -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <!-- Page load alert box -->
@@ -44,7 +44,7 @@
             <form>
               <input type="text" id="searchInput" class="form-control" placeholder="Search">
               <button type="submit" id="searchButton" class="btn">
-                <img src="./assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+                <img src="./../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
               </button>
             </form>
           </div>
@@ -64,7 +64,7 @@
             <button class="menuItem menuItemOther btn" id="menuTileStyle">
               <p>Contact</p>
             </button>
-            <button class="menuItem btn" id="menuItemLogin" id="menuTileStyle">
+            <button class="menuItem btn" id="menuItemLogin">
               <p>LOGIN</p>
             </button>
           </div>
@@ -113,6 +113,7 @@
           <!-- CARD 2 - HEADING -->
           <h2 style="font-size: 25px;
                     font-family: 'Karla', sans-serif;
+                    letter-spacing: 0.5px;
                     position: relative;
                     left: 50px;
                     top: 30px;"><b>Staff Access</b></h2>
@@ -125,6 +126,7 @@
               color: #ffffff;
               position: relative;
               top: 20px;
+              letter-spacing: 3px;
             }
   
             .tileGridContainer1 {
@@ -136,7 +138,7 @@
               transform: translateX(-50%);
               display: grid;
               grid-gap: 10px;
-              grid-template-columns: 220px 220px 220px 220px;
+              grid-template-columns: 24.2% 24.2% 24.2% 24.2%;
               grid-template-rows: 250px 250px;
               background-color: #ffffff;
             }
@@ -159,7 +161,7 @@
               transform: translateX(-50%);
               display: grid;
               grid-gap: 10px;
-              grid-template-columns: 297px 297px 297px;
+              grid-template-columns: 32.6% 32.6% 32.6%;
               grid-template-rows: 200px;
               background-color:#ffffff;
             }
@@ -184,6 +186,7 @@
               position: relative;
               top: -80px;
               left: 75px;
+              letter-spacing: 3px;
             }
             </style>
           
@@ -197,7 +200,8 @@
                                                               font-size: 150px;"></i>
                   <p class="grid1ItemText">ADMIN</p>
                 </button>
-                <button class="btn tileGridItem1" style="background-color: #0d3155ff;">
+                <button class="btn tileGridItem1" style="background-color: #0d3155ff;"
+                  data-toggle="modal" data-target="#trainingModal">
                   <i class="fa fa-users fa-4x" style="color: #ffffff;
                                                       margin-top: 15px;"></i>
                   <p class="grid1ItemText" style="margin-top: 15px;">TRAINING</p>
@@ -206,34 +210,37 @@
                   onclick="window.open('http://www.health.gov.lk/CMS/cmsmoh1', '_blank');">
                   <i class="fa fa-medkit fa-5x" style="color: #ffffff;
                                                       font-size: 140px;"></i>
-                  <p class="grid1ItemText" style="margin-top: -10px;">HEALTH <br> CIRCULAR</p>
+                  <p class="grid1ItemText" style="margin-top: -10px;">HEALTH<br>CIRCULAR</p>
                 </button>  
                 <button class="btn tileGridItem1" style="background-color: #1690ffff;"
                   onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=181', '_blank');">
                   <i class="fa fa-archive fa-5x" style="color: #ffffff;
                                                         font-size: 140px;"></i>
-                  <p class="grid1ItemText" style="margin-top: -10px;">OTHER <br> CIRCULAR</p>
+                  <p class="grid1ItemText" style="margin-top: -10px;">OTHER<br>CIRCULAR</p>
                 </button>
-                <button class="btn tileGridItem1" style="background-color: #a2cff8ff;">
+                <button class="btn tileGridItem1" style="background-color: #a2cff8ff;"
+                  data-toggle="modal" data-target="#researchModal">
                   <i class="fa fa-search fa-5x" style="color: #ffffff;"></i>
                   <p class="grid1ItemText">RESEARCH</p>
                 </button>
-                <button class="btn tileGridItem1" style="background-color: #2684dcff;">
+                <button class="btn tileGridItem1" style="background-color: #2684dcff;"
+                  onclick="window.open('http://www.health.gov.lk/moh_final/english/staff_notices.php', '_blank');">
                   <i class="fa fa-file-text-o fa-5x" style="color: #ffffff;
                                                             font-size: 130px;
                                                             margin-top: 10px;"></i>
-                  <p class="grid1ItemText" style="margin-top: -10px;">STAFF <br> NOTICES</p>
+                  <p class="grid1ItemText" style="margin-top: -10px;">STAFF<br>NOTICES</p>
                 </button>
-                <button class="btn tileGridItem1" style="background-color: #0d3155ff;">
+                <button class="btn tileGridItem1" style="background-color: #0d3155ff;"
+                  data-toggle="modal" data-target="#webSystemsModal">
                   <i class="fa fa-globe fa-5x" style="color: #ffffff;"></i>
-                  <p class="grid1ItemText" style="margin-top: -20px;">WEB <br> SYSTEM</p>
+                  <p class="grid1ItemText" style="margin-top: -20px;">WEB<br>SYSTEMS</p>
                 </button>
                 <button class="btn tileGridItem1" style="background-color: #06539bff;"
                   onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/telephoneDirectory/Tele%20directory%202020%20Draft11.pdf', '_blank');">
                   <i class="fa fa-book fa-5x" style="color: #ffffff;
                                                     font-size: 140px;
                                                     margin-top: 5px;"></i>
-                  <p class="grid1ItemText" style="margin-top: -14px;">PHONE <br> DIRECTORY</p>
+                  <p class="grid1ItemText" style="margin-top: -14px;">PHONE<br>DIRECTORY</p>
                 </button>
             </div>
             <div class="tileGridContainer2">
@@ -255,7 +262,7 @@
                 <i class="fa fa-calendar fa-5x grid2ItemIcon" style="color: #ffffff;
                                                                     margin-top: -5px;
                                                                     font-size: 130px;"></i>
-                <p class="grid2ItemText" style="margin-left: 8px;">SCHEDULE <br> CALENDAR</p>
+                <p class="grid2ItemText" style="margin-left: 8px;">SCHEDULE<br>CALENDAR</p>
               </button>
           </div>
 
@@ -275,6 +282,7 @@
             <!-- CARD 2 - CARD 1 - HEADING -->
             <h2 style="font-size: 25px;
                       font-family: 'Karla', sans-serif;
+                      letter-spacing: 0.5px;
                       position: relative;
                       left: 50px;
                       top: 30px;"><b>Recent Staff Notice</b></h2>
@@ -465,11 +473,45 @@
                       </button>
                     </td>
                   </tr>
+                  <tr> <!-- RECENT STAFF NOTICE TABLE - ROW 9 -->
+                    <td class="tableColumn1Style">
+                      <p class="tableColumn1TopTextStyle">06</p>
+                      <p class="tableColumn1BottomTextStyle" style="letter-spacing: 2px;">JAN</p>
+                    </td>
+                    <td class="tableColumn2Style">
+                      <p>
+                        Recruitment of Tutors for the Training School of Cardiography belonging to the Para Medical Service
+                      </p>
+                    </td>
+                    <td class="tableColumn3Style">
+                      <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                        onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/StaffNotices/2019/02-151-2019.pdf', '_blank');">
+                        <b>Read More</b>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr> <!-- RECENT STAFF NOTICE TABLE - ROW 10 -->
+                    <td class="tableColumn1Style">
+                      <p class="tableColumn1TopTextStyle">03</p>
+                      <p class="tableColumn1BottomTextStyle" style="letter-spacing: 2px;">DEC</p>
+                    </td>
+                    <td class="tableColumn2Style">
+                      <p>
+                        Granting of Earned Leave to be spent abroad for Dental Specialists – 2020
+                      </p>
+                    </td>
+                    <td class="tableColumn3Style">
+                      <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                        onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/StaffNotices/2019/02-144-2019.pdf', '_blank');">
+                        <b>Read More</b>
+                      </button>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
               <button type="button" class="btn btn-primary btn-sm" style="margin-left: 10px;
                                                                           margin-bottom: 10px;"
-                onclick="window.location.href = 'https://www.google.com/">
+                onclick="window.location.href = 'http://www.health.gov.lk/moh_final/english/staff_notices.php'">
                 <b>Show All</b>
               </button>
             </div>
@@ -488,6 +530,7 @@
             <!-- CARD 2 - CARD 1 - HEADING -->
             <h2 style="font-size: 25px;
                       font-family: 'Karla', sans-serif;
+                      letter-spacing: 0.5px;
                       text-align: center;
                       position: relative;
                       top: 30px;"><b>About Our Staff</b></h2>
@@ -525,25 +568,103 @@
             border-radius: 10px;
             background-color: rgb(241, 241, 241);
           }
-          
+
+          .modal-title{
+            letter-spacing: 3px;
+          }
+
+          .mainCardStyle{
+            width: 90%;
+            height: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 10px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            padding-top: 15px;
+            padding-bottom: 30px;
+          }
+
+          .mainButtonStyle{
+            width: 95%;
+            height: 55px;
+            background-color: aqua;
+            border-radius: 10px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          .mainButtonTextStyle{
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            letter-spacing: 1px;
+          }
+
+          .subButtonTextStyle{
+            font-size: 18px;
+            position: relative;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 1px;
+          }
+
+          /* MODAL MAIN BUTTON STYLES */
           .btn-outline-primary{
-            background-color: rgb(119, 119, 119);
+            background-color:#3880ff;
             color: #ffffff;
           }
 
           .btn-outline-primary:hover{
             background-color: #ffffff;
-            color: #13547a;
+            color: #3880ff;
+          }
+
+          /* MODAL SUB BUTTON STYLES */
+          .btn-outline-secondary{
+            background-color:#646464;
+            color: #ffffff;
+          }
+
+          .btn-outline-secondary:hover{
+            background-color: #ffffff;
+            color: #646464;
+          }
+
+          .cardGridContainer {
+            width: 85%;
+            height: auto;
+            position: relative;
+            top: 10px;
+            left: 49.7%;
+            transform: translateX(-50.2%);
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50px 50px 50px;
+            background-color: #ffffff;
+          }
+
+          .tileGridItem {
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
           }
         </style>
 
-        <!-- TILE MODALS -->
+        <!-- STAFF ACCESS TILE MODALS -->
         <!-- MODAL 1 - ADMIN -->
         <div class="modal fade" id="adminModal" data-backdrop="static" data-keyboard="false">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
-              <!-- MODAL HEADER -->
+              <!-- MODAL 1 - HEADER -->
               <div class="modal-header">
                 <h4 class="modal-title">ADMINISTRATION</h4>
                 <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
@@ -551,51 +672,270 @@
                 </button>
               </div>
 
-              <!-- MODAL BODY -->
+              <!-- MODAL 1 - BODY -->
               <div class="modal-body">
                 
-                <div style="height: 200px;
-                            width: 90%;
-                            position: relative;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            border-radius: 10px;
-                            background-color: #ffffff;">
-                  <div style="height: 100%;
-                              width: 50%;
-                              background-color: #ffffff;
-                              float: left;
-                              border-right: #ccc 1px solid;
-                              border-radius: 10px 0px 0px 10px;">
-                    <button style="height: 40px;
-                                width: 95%;
-                                border: #06539bff 1px solid;
-                                position: relative;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%,-50%);
-                                border-radius: 10px;" class="btn btn-outline-primary">
-                      <p style="font-size: 19px;
-                                letter-spacing: 2px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%,-50%);"><b>Appointments</b></p>
+                <!-- CARD 1 - HEADING -->
+                <div class="mainCardStyle">
+                  <div class="mainButtonStyle" style="background-color: #3880ff;
+                                                      color: #ffffff;">
+                    <p class="mainButtonTextStyle">Appointments</p>
+                  </div>
+
+                  <!-- CARD 1 - TILES SECTION -->
+                  <!-- CARD 1 - TILES SECTION - CONTAINER -->
+                  <div class="cardGridContainer">
+                    <!-- CARD 1 - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=77', '_blank');">
+                      <p class="subButtonTextStyle">Internship</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=79', '_blank');">
+                      <p class="subButtonTextStyle">Post Intern</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=82', '_blank');">
+                      <p class="subButtonTextStyle" style="font-size: 15px;
+                                                            top: -10px;">Specialist Grade Medical Officers</p>
+                    </button>  
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=89', '_blank');">
+                      <p class="subButtonTextStyle">Dental Surgeon</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=155', '_blank');">
+                      <p class="subButtonTextStyle">PSM & Para Medicine</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=156', '_blank');">
+                      <p class="subButtonTextStyle">Nursing Officer</p>
+                    </button>
+
+                    <button class="btn btn-outline-secondary tileGridItem" style="height: 50px;"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=182', '_blank');">
+                      <p class="subButtonTextStyle" style="font-size: 17px;
+                                                          top: -10px;">Medical Administrative Grade</p>
                     </button>
                   </div>
-                  <div style="height: 100%;
-                              width: 50%;
-                              float: left;
-                              background-color: #ffffff;
-                              border-radius: 0px 10px 10px 0px;;">
+                </div>
 
+
+                <!-- CARD 2 - HEADING -->
+                <div class="mainCardStyle" style="margin-top: 20px;">
+                  <button class="btn btn-outline-primary mainButtonStyle"
+                    onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=87', '_blank');">
+                    <p class="mainButtonTextStyle">Transfers</p>
+                  </button>
+
+                  <!-- CARD 2 - TILES SECTION -->
+                  <div>
+                    <!-- CARD 2 - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem" style="width: 90%;
+                                                                                  height: 50px;
+                                                                                  position: relative;
+                                                                                  top: 10px;
+                                                                                  left: 50%;
+                                                                                  transform: translateX(-50%);"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=131', '_blank');">
+                      <p class="subButtonTextStyle">End Posts</p>
+                    </button>
                   </div>
                 </div>
+
+
+                <!-- CARD 3 - HEADING -->
+                <div class="mainCardStyle" style="margin-top: 20px;">
+                  <div class="mainButtonStyle" style="background-color: #3880ff;
+                                                      color: #ffffff;">
+                    <p class="mainButtonTextStyle">Examination</p>
+                  </div>
+
+                  <!-- CARD 3 - TILES SECTION -->
+                  <!-- CARD 3 - TILES SECTION - CONTAINER -->
+                  <div class="cardGridContainer" style="height: 50px;">
+                    <!-- CARD 3 - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=133', '_blank');">
+                      <p class="subButtonTextStyle">Results</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=132', '_blank');">
+                      <p class="subButtonTextStyle">Circulars</p>
+                    </button>
+                  </div>
+                </div>
+
+
+                <!-- CARD 4 - HEADING -->
+                <div class="mainCardStyle" style="margin-top: 20px;">
+                  <!-- CARD 4 - TILES SECTION -->
+                  <!-- CARD 4 - TILES SECTION - CONTAINER -->
+                  <div class="cardGridContainer" style="height: 110px;">
+                    <!-- CARD 4 - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=88', '_blank');">
+                      <p class="subButtonTextStyle">Vacancies</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=143', '_blank');">
+                      <p class="subButtonTextStyle">Promotion</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=91', '_blank');">
+                      <p class="subButtonTextStyle">Scheme of Recruitment</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=194', '_blank');">
+                      <p class="subButtonTextStyle">Job Description</p>
+                    </button>
+                  </div>
+                </div>
+
+                
 
               </div>
             </div>
           </div>
         </div>
+
+
+        <!-- MODAL 2 - TRAINING -->
+        <div class="modal fade" id="trainingModal" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+              <!-- MODAL 2 - HEADER -->
+              <div class="modal-header">
+                <h4 class="modal-title">TRAINING</h4>
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                  <i class="fa fa-times" style="font-size: 20px;"></i>
+                </button>
+              </div>
+
+              <!-- MODAL 2 - BODY -->
+              <div class="modal-body">
+
+                <!-- CARD - HEADING -->
+                <div class="mainCardStyle">
+                  <!-- CARD - TILES SECTION -->
+                  <!-- CARD - TILES SECTION - CONTAINER -->
+                  <div class="cardGridContainer" style="height: 110px;">
+                    <!-- CARD - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=124', '_blank');">
+                      <p class="subButtonTextStyle">Local</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=125', '_blank');">
+                      <p class="subButtonTextStyle">International</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=168', '_blank');">
+                      <p class="subButtonTextStyle" style="font-size: 15px;
+                                                          top: -8px;">In Service and Individual (ET&R)</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://203.94.76.60/', '_blank');">
+                      <p class="subButtonTextStyle">Online Training</p>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- MODAL 3 - RESEARCH -->
+        <div class="modal fade" id="researchModal" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+              <!-- MODAL 3 - HEADER -->
+              <div class="modal-header">
+                <h4 class="modal-title">STAFF RESEARCH</h4>
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                  <i class="fa fa-times" style="font-size: 20px;"></i>
+                </button>
+              </div>
+
+              <!-- MODAL 3 - BODY -->
+              <div class="modal-body">
+
+                 <!-- CARD - HEADING -->
+                 <div class="mainCardStyle">
+                  <!-- CARD - TILES SECTION -->
+                  <!-- CARD - TILES SECTION - CONTAINER -->
+                  <div class="cardGridContainer" style="height: 55px;">
+                    <!-- CARD - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=129', '_blank');">
+                      <p class="subButtonTextStyle">Funding</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=130', '_blank');">
+                      <p class="subButtonTextStyle">Research Allowance</p>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- MODAL 3 - WEB SYSTEMS -->
+        <div class="modal fade" id="webSystemsModal" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+              <!-- MODAL 3 - HEADER -->
+              <div class="modal-header">
+                <h4 class="modal-title">STAFF WEB SYSTEMS</h4>
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+                  <i class="fa fa-times" style="font-size: 20px;"></i>
+                </button>
+              </div>
+
+              <!-- MODAL 3 - BODY -->
+              <div class="modal-body">
+
+                <!-- CARD - HEADING -->
+                <div class="mainCardStyle">
+                  <!-- CARD - TILES SECTION -->
+                  <!-- CARD - TILES SECTION - CONTAINER -->
+                  <div class="cardGridContainer" style="height: 115px;">
+                    <!-- CARD - TILES SECTION - ITEMS -->
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://hrms.health.gov.lk/', '_blank');">
+                      <p class="subButtonTextStyle">HRM System</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://hrmis.health.gov.lk/', '_blank');">
+                      <p class="subButtonTextStyle">Doctor HRM System</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem"
+                      onclick="window.open('http://www.health.gov.lk/HFSurvey/', '_blank');">
+                      <p class="subButtonTextStyle">Facility Survey</p>
+                    </button>
+                    <button class="btn btn-outline-secondary tileGridItem" 
+                      onclick="window.open('http://mail.health.gov.lk/', '_blank');">
+                      <p class="subButtonTextStyle">Web Mail</p>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
 
 
       <!-- BODY SECTION - End -->
