@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Other Related Sites</title>
+    <title>Ministry Of Health - Other Related Sites</title>
 
     <!-- Importing styles for default header and footer sections -->
     <link rel="stylesheet" type="text/css" href="assets/css/defaultHeaderFooterStyles.css">
@@ -14,8 +14,10 @@
     <script src="assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
     <script src="assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
     <script src="assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
-    <!-- Importing google fonts from online -->
+    <!-- Importing google fonts from the web -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from the web -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!-- MAIN CONTENT SECTION - Begin -->
@@ -92,6 +94,31 @@
                     position: relative;
                     left: 50px;
                     top: 30px;"><b>Other Related Sites</b></h2>
+
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="Click on a blue drop down to reveal the options.<br>
+                        Click on one of these options to access more information."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+          <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();   
+            });
+          </script>
 
           <!-- CARD TILE SECTION -->
           <div style="width: 85%;
@@ -271,8 +298,8 @@
               <p class="cardTileHeadingStyle">
                 PROGRAMMES, CAMPAIGNS AND SPECIALIZED UNITS
               </p>
-              <img src="assets/images/otherRelatedSites/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile1">
-              <img src="assets/images/otherRelatedSites/upwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile1">                                                                                                                     
+              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile1">
+              <img src="assets/images/otherRelatedSitesWebpages/upwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile1">                                                                                                                     
             </button>
 
                 <!-- CARD TILE 1 - SUBTILE -->
@@ -391,8 +418,8 @@
               <p class="cardTileHeadingStyle">
                 OTHER LINKS
               </p>
-              <img src="assets/images/otherRelatedSites/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile2">
-              <img src="assets/images/otherRelatedSites/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile2"> 
+              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile2">
+              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile2"> 
             </button>
 
                 <!-- CARD TILE 2 - SUBTILE -->
@@ -539,8 +566,8 @@
               <p class="cardTileHeadingStyle">
                 USEFUL SITES
               </p>
-              <img src="assets/images/otherRelatedSites/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile3">
-              <img src="assets/images/otherRelatedSites/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile3"> 
+              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile3">
+              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile3"> 
             </button>
 
                 <!-- CARD TILE 3 - SUBTILE -->
@@ -596,8 +623,8 @@
               <p class="cardTileHeadingStyle">
                 HEALTH RELATED PROFESSIONAL COLLEGES
               </p>
-              <img src="assets/images/otherRelatedSites/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile4">
-              <img src="assets/images/otherRelatedSites/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile4"> 
+              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile4">
+              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile4"> 
             </button>
 
                 <!-- CARD TILE 4 - SUBTILE -->
@@ -716,8 +743,8 @@
               <p class="cardTileHeadingStyle">
                 CORPORATIONS
               </p>
-              <img src="assets/images/otherRelatedSites/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile5">
-              <img src="assets/images/otherRelatedSites/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile5"> 
+              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile5">
+              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile5"> 
             </button>
 
                 <!-- CARD TILE 5 - SUBTILE -->
@@ -745,8 +772,8 @@
               <p class="cardTileHeadingStyle">
                 PRESIDENTIAL SECRETARIAT
               </p>
-              <img src="assets/images/otherRelatedSites/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile6">
-              <img src="assets/images/otherRelatedSites/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile6"> 
+              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile6">
+              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile6"> 
             </button>
 
                 <!-- CARD TILE 6 - SUBTILE -->

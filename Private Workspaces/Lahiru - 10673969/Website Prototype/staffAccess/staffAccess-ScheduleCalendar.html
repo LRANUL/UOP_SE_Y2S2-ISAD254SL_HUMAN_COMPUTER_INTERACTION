@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Setting responsive viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ministry Of Health - Schedule Calendar</title>
+
+    <!-- Importing styles for default header and footer sections -->
+    <link rel="stylesheet" type="text/css" href="./../assets/css/defaultHeaderFooterStyles.css">
+    <!-- Importing files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- Importing google fonts from online -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from online -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <!-- MAIN CONTENT SECTION - Begin -->
+      <!-- HEADER SECTION - Begin -->
+      <div id="header">
+        <div id="headerContent">
+          <div id="headerMenu">
+            <button class="languageSelection btn" id="languageSelectionEnglish">
+              <p>English</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionSinhala">
+              <p>සිංහල</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionTamil">
+              <p>தமிழ்</p> 
+            </button>
+            <h1 id="mainTitle">MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h1>
+            <form>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+                <img src="./../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+              </button>
+            </form>
+          </div>
+          <div id="headerMenuBar">
+            <button class="menuItem btn" id="menuTileStyle">
+              <p>Wellbeing</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Lifestyle</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Travelers</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Notices</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Contact</p>
+            </button>
+            <button class="menuItem btn" id="menuItemLogin">
+              <p>LOGIN</p>
+            </button>
+          </div>
+        </div>
+        <div id="headerBanner">
+          <h1>HEALTH ALERT</h1>
+          <p>Take precautions provided by Ministry of Health</p>
+        </div>
+      </div>
+      <!-- HEADER SECTION - End -->
+      
+      <!-- BODY SECTION - Begin -->
+      <div style="width: 100%;
+                  height: auto;
+                  padding-bottom: 150px;
+                  background-color: rgb(241, 241, 241);">
+
+        <!-- BODY CONTENT SECTION - CARD -->
+        <div style="width: 60%;
+                    height: auto;
+                    background-color: #ffffff;
+                    position: relative;
+                    left: 50%;
+                    top: 50px;
+                    padding-bottom: 100px;
+                    transform: translateX(-50%);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="Upon page load, current date will be selected and sessions will be shown.<br>
+                        How to check sessions from other dates?<br>
+                        Select a date from the calendar and the sessions will be shown below the calendar."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+          <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();   
+            });
+          </script>
+
+          <!-- CARD HEADING -->
+          <h2 style="font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    position: relative;
+                    left: 50px;
+                    top: 30px;"><b>Schedule Calendar</b></h2>
+          <!-- SCHEDULE CALENDAR STYLES -->
+          <style>
+
+            .calendarMonthChangeButton{
+              height: 35px;
+              width: 35px;
+            }
+
+            .btn:hover{
+              background-color: #ccc;
+            }
+
+            .calendarDayNameGrid{
+              width: 90%;
+              height: 50px;
+              border: #ccc solid 1px;
+              border-radius: 5px 5px 0px 0px;
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+              top: 8px;
+              display: grid;
+              grid-gap: 0px;
+              grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+            }
+
+            .calendarDayNameItem{
+              position: relative;
+              top: 8px;
+              left: 38px;
+              letter-spacing: 2px;
+              font-weight: 600;
+            }
+
+            .calendarGrid{
+              width: 90%;
+              height: 500px;
+              position: relative;
+              top: 0px;
+              left: 50%;
+              transform: translateX(-50%);
+              display: grid;
+              grid-gap: 0px;
+              grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+              grid-template-rows: 100px 100px;
+              background-color: #ffffff;
+            }
+  
+            .calendarGridItem{
+              padding: 5px;
+              border: #ccc solid 1px;
+            }
+
+            .calendarGridItemText{
+              font-size: 30px;
+              position: relative;
+              letter-spacing: 2px;
+              top: 4px;
+              left: 60px;
+            }
+
+            .calendarGridItemTextCircle{
+              height: 55px;
+              width: 55px;
+              border-radius: 30px;
+              background-color: rgb(0, 115, 150);
+              position: relative;
+              top: 4px;
+              left: 50px;
+            }
+
+            .calendarGridItemPastDates{
+              color: rgb(153, 153, 153);
+            }
+
+          </style>
+
+          <!-- SCHEDULE CALENDAR - CALENDAR -->
+          <div style="height: 960px;
+                      width: 90%;
+                      border: #ccc solid 1px;
+                      border-radius: 5px;
+                      position: relative;
+                      left: 50%;
+                      top: 40px;
+                      transform: translateX(-50%);">
+            <!-- CALENDAR HEADER - LEFT ARROW ICON, MONTH TEXT AND RIGHT ARROW ICON  -->
+            <div style="width: 250px;
+                        height: 50px;
+                        position: relative;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);">
+              <!-- LEFT BUTTON ICON -->
+              <button class="btn calendarMonthChangeButton" style="float: left;
+                                                                    position: absolute;
+                                                                    left: 10%;
+                                                                    transform: translateX(-90%);">
+                <span class="material-icons" style="position: absolute;
+                                                    top: 5px;
+                                                    left: 5px;">
+                  keyboard_arrow_left
+                </span>                
+              </button>
+              <!-- MONTH TEXT -->
+              <p style="float: left;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 5px;
+                        font-weight: 500;">
+                MAY
+              </p>
+              <!-- RIGHT BUTTON ICON -->
+              <button class="btn calendarMonthChangeButton" style="float: left;
+                                                                  position: absolute;
+                                                                  left: 90%;
+                                                                  transform: translateX(-10%);">
+                <span class="material-icons" style="position: absolute;
+                                                    top: 5px;
+                                                    left: 5px;">
+                  keyboard_arrow_right
+                </span>                
+              </button>
+            </div>
+
+            <!-- CALENDAR LAYOUT -->
+            <!-- CALENDAR DAY NAME GRID -->
+            <div class="calendarDayNameGrid">
+              <!-- CALENDAR DAY NAME GRID ITEMS -->
+              <div class="calendarDayNameItem"><!-- CALENDAR DAY NAME GRID ITEM 1  -->
+                MON
+              </div>
+              <div class="calendarDayNameItem" style="margin-left: 2px;"><!-- CALENDAR DAY NAME GRID ITEM 2 -->
+                TUE
+              </div>
+              <div class="calendarDayNameItem" style="margin-left: 3px;"><!-- CALENDAR DAY NAME GRID ITEM 3 -->
+                WED
+              </div>
+              <div class="calendarDayNameItem" style="margin-left: 4px;"><!-- CALENDAR DAY NAME GRID ITEM 4 -->
+                THU
+              </div>
+              <div class="calendarDayNameItem" style="margin-left: 8px;"><!-- CALENDAR DAY NAME GRID ITEM 5 -->
+                FRI
+              </div>
+              <div class="calendarDayNameItem" style="margin-left: 8px;"><!-- CALENDAR DAY NAME GRID ITEM 6 -->
+                SAT
+              </div>
+              <div class="calendarDayNameItem" style="margin-left: 8px;"><!-- CALENDAR DAY NAME GRID ITEM 7 -->
+                SUN
+              </div>
+            </div>
+            <!-- CALENDAR GRID -->
+            <div class="calendarGrid">
+              <!-- CALENDAR GRID ITEMS -->
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 1 -->
+                <p class="calendarGridItemText calendarGridItemPastDates">27</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 2 -->
+                <p class="calendarGridItemText calendarGridItemPastDates">28</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 3 -->
+                <p class="calendarGridItemText calendarGridItemPastDates">29</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 4 -->
+                <p class="calendarGridItemText calendarGridItemPastDates">30</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 5 -->
+                <p class="calendarGridItemText">1</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 6 -->
+                <p class="calendarGridItemText">2</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 7 -->
+                <p class="calendarGridItemText">3</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 8 -->
+                <p class="calendarGridItemText">4</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 9 -->
+                <p class="calendarGridItemText">5</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 10 -->
+                <p class="calendarGridItemText">6</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 11 -->
+                <p class="calendarGridItemText">7</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 12 -->
+                <p class="calendarGridItemText">8</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 13 -->
+                <p class="calendarGridItemText">9</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 14 -->
+                <p class="calendarGridItemText">10</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 15 -->
+                <p class="calendarGridItemText">11</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 16 -->
+                <p class="calendarGridItemText">12</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 17 -->
+                <p class="calendarGridItemText">13</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 18 -->
+                <div class="calendarGridItemTextCircle">
+                  <p class="calendarGridItemText" style="margin-left: -50px;
+                                                        color: #ffffff">14</p>
+                </div>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 19 -->
+                <p class="calendarGridItemText">15</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 20 -->
+                <p class="calendarGridItemText">16</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 21 -->
+                <p class="calendarGridItemText">17</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 22 -->
+                <p class="calendarGridItemText">18</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 23 -->
+                <p class="calendarGridItemText">19</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 24 -->
+                <p class="calendarGridItemText">20</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 25 -->
+                <p class="calendarGridItemText">21</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 26 -->
+                <p class="calendarGridItemText">22</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 27 -->
+                <p class="calendarGridItemText">23</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 28 -->
+                <p class="calendarGridItemText">24</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 29 -->
+                <p class="calendarGridItemText">25</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 20 -->
+                <p class="calendarGridItemText">26</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 31 -->
+                <p class="calendarGridItemText">27</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 32 -->
+                <p class="calendarGridItemText">28</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 33 -->
+                <p class="calendarGridItemText">29</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 34 -->
+                <p class="calendarGridItemText">30</p>
+              </div>
+              <div class="calendarGridItem"><!-- CALENDAR GRID ITEM 35 -->
+                <p class="calendarGridItemText">31</p>
+              </div>
+            </div>
+
+            <!-- SCHEDULE CALENDAR - SCHEDULE DETAILS -->
+            <div style="width: 90%;
+                        height: 310px;
+                        border: #ccc solid 1px;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-radius: 0px 0px 5px 5px;">
+              <div style="position: relative;
+                          left: 50%;
+                          top: 30px;
+                          transform: translateX(-50%);
+                          border: #ccc solid 1px;
+                          height: 60px;
+                          width: 225px;
+                          padding-top: 16px;
+                          padding-left: 16px;">
+                <span class="material-icons" style="float: left;
+                                                    color: rgb(0, 122, 179);">
+                  highlight_off
+                </span>
+                <p style="float: left;
+                          margin-left: 10px;">NO SESSIONS TODAY</p>   
+              </div>             
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+      <!-- BODY SECTION - End -->
+
+      <!-- FOOTER SECTION - Begin -->
+      <div id="footer">
+        <h3>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h3>
+      </div>
+      <!-- FOOTER SECTION - End -->
+
+    <!-- MAIN CONTENT SECTION - End -->
+
+  </body>
+</html>
