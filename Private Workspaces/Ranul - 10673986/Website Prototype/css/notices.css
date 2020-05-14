@@ -1,0 +1,581 @@
+
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+div { position: absolute; }
+
+#content-container { display: table; position: relative; width: 100%; height: 100%; margin-left: auto; margin-right: auto;  }
+
+#_bg__notices {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background:rgba(255,255,255,255);
+}
+
+
+#rectangle_26 {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 159px;
+	background:rgba(85,165,220,255);
+}
+
+
+#rectangle_28 {
+	top: 45px;
+	left: 75%;
+	width: 283px;
+	height: 34px;
+	-ms-border-radius: 17px;
+	-o-border-radius: 17px;
+	-moz-border-radius: 17px;
+	-webkit-border-radius: 17px;
+	border-radius: 17px;
+	-ms-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#icon_awesome_search {
+	top: 7px;
+	left: 85%;
+	width: 20.53125px;
+	height: 20.533935546875px;
+}
+
+
+
+
+#rectangle_29 {
+	top: 43px;
+	left: 40px;
+	width: 837px;
+	height: 36px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background:rgba(255,255,255,255);
+}
+
+
+#ministry_of_health_and_indigenous_medical_services {
+	top: 41px;
+	left: 52px;
+	width: 805px;
+	height: 43px;
+	font-family: Segoe UI;
+	font-size: 28px;
+	text-align: left;
+	color:#55a5dc;
+}
+
+
+#rectangle_30 {
+	top: 117px;
+	left: 40px;
+	width: 202px;
+	height: 42px;
+	background:rgba(58,149,212,255);
+}
+
+
+#rectangle_32 {
+	top: 117px;
+	left: 249px;
+	width: 203px;
+	height: 42px;
+	background:rgba(58,149,212,255);
+}
+
+
+#rectangle_31 {
+	top: 117px;
+	left: 40px;
+	width: 202px;
+	height: 42px;
+	background:rgba(58,149,212,255);
+}
+
+
+#wellbeing {
+	top: 124px;
+	left: 92px;
+	width: 104px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#ffffff;
+}
+
+
+#lifestyle {
+	top: 125px;
+	left: 310px;
+	width: 86px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#ffffff;
+}
+
+
+#rectangle_34 {
+	top: 117px;
+	left: 459px;
+	width: 202px;
+	height: 42px;
+	background:rgba(58,149,212,255);
+}
+
+
+#travelers_ {
+	top: 125px;
+	left: 512px;
+	width: 97px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#ffffff;
+}
+
+
+#rectangle_36 {
+	top: 117px;
+	left: 668px;
+	width: 202px;
+	height: 42px;
+	background:rgba(29,103,154,255);
+}
+
+
+#notices {
+	top: 124px;
+	left: 731px;
+	width: 79px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#ffffff;
+}
+
+
+#rectangle_38 {
+	top: 117px;
+	left: 877px;
+	width: 202px;
+	height: 42px;
+	background:rgba(58,149,212,255);
+}
+
+
+#rectangle_42 {
+	top: 117px;
+	left: 92%;
+	width: 114px;
+	height: 42px;
+	background:rgba(29,103,154,255);
+}
+
+
+#rectangle_39 {
+	top: 3px;
+	left: 90%;
+	width: 49px;
+	height: 21px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background:rgba(255,255,255,255);
+}
+
+
+#rectangle_40 {
+	top: 3px;
+	left: 93.5%;
+	width: 51px;
+	height: 21px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background:rgba(255,255,255,255);
+}
+
+
+#rectangle_41 {
+	top: 3px;
+	left: 97%;
+	width: 47px;
+	height: 21px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background:rgba(255,255,255,255);
+}
+
+
+#contact {
+	top: 125px;
+	left: 939px;
+	width: 81px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#ffffff;
+}
+
+
+#login {
+	top: 126px;
+	left: 93.5%;
+	width: 49px;
+	height: 25px;
+	font-family: Segoe UI;
+	font-size: 17px;
+	text-align: left;
+	color:#ffffff;
+}
+
+
+#english {
+	top: 3px;
+	left: 90%;
+	width: 50px;
+	height: 22px;
+	font-family: Segoe UI;
+	font-size: 14px;
+	text-align: left;
+	color:#2f8ccc;
+}
+
+
+#සිංහල {
+	top: 4px;
+	left: 93.5%;
+	width: 49px;
+	height: 22px;
+	font-family: Segoe UI;
+	font-size: 14px;
+	text-align: left;
+	color:#2f8ccc;
+}
+
+
+#தமிழ் {
+	top: 3px;
+	left: 97%;
+	width: 47px;
+	height: 22px;
+	font-family: Segoe UI;
+	font-size: 14px;
+	text-align: left;
+	color:#2f8ccc;
+}
+
+
+#rectangle_43 {
+	top: 159px;
+	left: 0px;
+	width: 100%;
+	height: 139px;
+	-ms-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(250,233,77,255);
+}
+
+
+#rectangle_52 {
+	top: 1308px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	-ms-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:0px 3px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(85,165,220,255);
+}
+
+
+#health_alert_ {
+	top: 181px;
+	left: 40px;
+	width: 268px;
+	height: 54px;
+	font-family: Segoe UI;
+	font-size: 35px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#notices_ek1 {
+	top: 317px;
+	left: 32px;
+	width: 132px;
+	height: 54px;
+	font-family: Segoe UI;
+	font-size: 35px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#take_precautions_provided_by_ministry_of_health {
+	top: 237px;
+	left: 40px;
+	width: 528px;
+	height: 37px;
+	font-family: Segoe UI;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#ministry_of_health_and_indigenous_medical_services_ek1 {
+	top: 1326px;
+	width: 100%;
+	height: 25px;
+	font-family: Segoe UI;
+	font-size: 17px;
+	text-align: center;
+	color:#000000;
+}
+
+
+#rectangle_50 {
+	top: 587px;
+	left: 37px;
+	width: 463px;
+	height: 81px;
+	-ms-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#safety_and_self_quarantine_ {
+	top: 594px;
+	left: 35px;
+	width: 283px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_51 {
+	top: 403px;
+	left: 35px;
+	width: 465px;
+	height: 184px;
+}
+
+
+#rectangle_50_ek1 {
+	top: 587px;
+	left: 762px;
+	width: 463px;
+	height: 81px;
+	-ms-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#testing_for_fever {
+	top: 594px;
+	left: 760px;
+	width: 175px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_51_ek1 {
+	top: 403px;
+	left: 760px;
+	width: 465px;
+	height: 184px;
+}
+
+#group_5 {
+	top: 696px;
+	left: 35px;
+	width: 465px;
+	height: 577px;
+}
+
+#rectangle_50_ek2 {
+	top: 497px;
+	left: 2px;
+	width: 463px;
+	height: 80px;
+	-ms-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#elder_take_more_precautions_ {
+	top: 505px;
+	left: 0px;
+	width: 296px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_49 {
+	top: 0px;
+	left: 0px;
+	width: 465px;
+	height: 183px;
+}
+
+
+#rectangle_51_ek2 {
+	top: 313px;
+	left: 0px;
+	width: 465px;
+	height: 184px;
+}
+
+
+#rectangle_50_ek3 {
+	top: 183px;
+	left: 0px;
+	width: 465px;
+	height: 82px;
+	-ms-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#how_to_stay_healthy {
+	top: 210px;
+	left: 12px;
+	width: 205px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_50_ek4 {
+	top: 1193px;
+	left: 762px;
+	width: 463px;
+	height: 80px;
+	-ms-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#stay_home__stay_safe {
+	top: 1201px;
+	left: 760px;
+	width: 212px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_49_ek1 {
+	top: 696px;
+	left: 760px;
+	width: 465px;
+	height: 183px;
+}
+
+
+#rectangle_51_ek3 {
+	top: 1009px;
+	left: 760px;
+	width: 465px;
+	height: 184px;
+}
+
+
+#rectangle_50_ek5 {
+	top: 879px;
+	left: 760px;
+	width: 465px;
+	height: 82px;
+	-ms-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-o-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-webkit-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	-moz-box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	box-shadow:10px 10px 5px 1px rgba(0,0,0,0.41);
+	background:rgba(255,255,255,255);
+}
+
+
+#global_death_rates {
+	top: 906px;
+	left: 773px;
+	width: 192px;
+	height: 32px;
+	font-family: Segoe UI;
+	font-size: 21px;
+	text-align: left;
+	color:#000000;
+}
+
+
+
