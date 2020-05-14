@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Information Officers (RTI Act)</title>
+    <title>Ministry Of Health - Download</title>
 
     <!-- Importing styles for default header and footer sections -->
     <link rel="stylesheet" type="text/css" href="./../assets/css/defaultHeaderFooterStyles.css">
@@ -16,6 +16,8 @@
     <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
     <!-- Importing google fonts from online -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from the web -->  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!-- MAIN CONTENT SECTION - Begin -->
@@ -93,6 +95,31 @@
                     left: 50px;
                     top: 30px;"><b>Download</b></h2>
 
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="To download the document, click on the 'DOWNLOAD' button.<br>
+                        To download the cover letter, click on the 'DOWNLOAD COVER LETTER' button."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+          <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();   
+            });
+          </script>
+
           <div style="height: 750px;
                       width: 90%;
                       position: relative;
@@ -156,7 +183,7 @@
                     <th style="width: 59%;
                               letter-spacing: 0.5px;">Description</th>
                     <th style="width: 25%;
-                              letter-spacing: 0.5px;">Option</th>
+                              letter-spacing: 0.5px;">Options</th>
                   </tr>
                 </thead>
                 <tbody>

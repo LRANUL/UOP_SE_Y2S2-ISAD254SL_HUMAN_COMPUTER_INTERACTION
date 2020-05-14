@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Setting responsive viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ministry Of Health - Staff Notices</title>
+
+    <!-- Importing styles for default header and footer sections -->
+    <link rel="stylesheet" type="text/css" href="./../assets/css/defaultHeaderFooterStyles.css">
+    <!-- Importing files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- Importing google fonts from online -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from online -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <!-- MAIN CONTENT SECTION - Begin -->
+      <!-- HEADER SECTION - Begin -->
+      <div id="header">
+        <div id="headerContent">
+          <div id="headerMenu">
+            <button class="languageSelection btn" id="languageSelectionEnglish">
+              <p>English</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionSinhala">
+              <p>සිංහල</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionTamil">
+              <p>தமிழ்</p> 
+            </button>
+            <h1 id="mainTitle">MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h1>
+            <form>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+                <img src="./../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+              </button>
+            </form>
+          </div>
+          <div id="headerMenuBar">
+            <button class="menuItem btn" id="menuTileStyle">
+              <p>Wellbeing</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Lifestyle</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Travelers</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Notices</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Contact</p>
+            </button>
+            <button class="menuItem btn" id="menuItemLogin">
+              <p>LOGIN</p>
+            </button>
+          </div>
+        </div>
+        <div id="headerBanner">
+          <h1>HEALTH ALERT</h1>
+          <p>Take precautions provided by Ministry of Health</p>
+        </div>
+      </div>
+      <!-- HEADER SECTION - End -->
+      
+      <!-- BODY SECTION - Begin -->
+      <div style="width: 100%;
+                  height: auto;
+                  padding-bottom: 150px;
+                  background-color: rgb(241, 241, 241);">
+
+        <!-- BODY CONTENT SECTION - CARD -->
+        <div style="width: 60%;
+                    height: auto;
+                    background-color: #ffffff;
+                    position: relative;
+                    left: 50%;
+                    top: 50px;
+                    padding-bottom: 100px;
+                    transform: translateX(-50%);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <!-- CARD HEADING -->
+          <h2 style="font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    position: relative;
+                    left: 50px;
+                    top: 30px;"><b>Staff Notices</b></h2>
+          
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="Upon page load, notices that were sent from current month and previous month are shown.<br>
+                        How to get the notice(s) that was sent in a different month?<br>
+                        Select a month from the month dropdown."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+          <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();   
+            });
+          </script>
+
+          <!-- SELECT MONTH STYLES -->
+          <style>
+
+            select:required:invalid{
+              color: gray;
+            }
+
+            option[value=""][disabled]{
+              display: none;
+            }
+
+            option{
+              color: black;
+            }
+
+          </style>
+          <!-- CARD - SELECT MONTH -->  
+          <select required title="SELECT A MONTH" style="height: 50px;
+                                                        width: 90%;
+                                                        position: relative;
+                                                        top: 50px;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                        border-radius: 5px;">
+            <option value="" selected><p>SELECT A MONTH</p></option>
+            <option value="JAN"><p>January</p></option>
+            <option value="FED"><p>February</p></option>
+            <option value="MAR"><p>March</p></option>
+            <option value="APR"><p>April</p></option>
+            <option value="MAY"><p>May</p></option>
+            <option value="JUN"><p>June</p></option>
+            <option value="JUL"><p>July</p></option>
+            <option value="AUG"><p>August</p></option>
+            <option value="SEP"><p>September</p></option>
+            <option value="OCT"><p>October</p></option>
+            <option value="NOV"><p>November</p></option>
+            <option value="DEC"><p>December</p></option>
+          </select>
+          <!-- CARD - ALL STAFF NOTICE SECTION -->
+          <div style="height: 600px;
+                      width: 90%;
+                      position: relative;
+                      top: 50px;
+                      left: 50%;
+                      transform: translateX(-50%);
+                      overflow-y: auto;">
+            <!-- STAFF NOTICE SECTION TABLE STYLES -->
+            <style>
+              .tableColumn1Style{
+                width: 10%;
+                text-align: center;
+              }
+
+              .tableColumn2Style{
+                width: 70%;
+                text-align: justify;
+              }
+
+              .tableColumn2Style p{
+                position: relative;
+                top: 5px;
+              }
+
+              .tableColumn3Style{
+                width: 15%;
+                text-align: center;
+              }
+
+              .tableColumn1TopTextStyle{
+                margin-left: -10px;
+                font-size: 30px;
+              }
+
+              .tableColumn1BottomTextStyle{
+                font-size: 15px;
+                position: absolute;
+                margin-top: -25px;
+                left: 28px;
+              }
+
+              .tableButtonStyle{
+                width: 90px;
+                height: 35px;
+                position: relative;
+                top: 10px;
+              }
+            </style>
+            <!-- STAFF NOTICE TABLE -->
+            <table class="table table-hover">
+              <tbody>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 1 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">11</p>
+                    <p class="tableColumn1BottomTextStyle">MAY</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      Selection of Candidates for Public Health Midwife Training - 2019 / අතුරු වෛද්‍ය 
+                      සේවාවේ පවුල් සෞඛ්‍ය සේවා නිලධාරිනී පුහුණුව සඳහා අභ්‍යාසලාභීන් බඳවා ගැනීම - 2019
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/publications/publicNotices/GeneralNotice/2020/PHM-2019.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 2 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">09</p>
+                    <p class="tableColumn1BottomTextStyle">MAY</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      Stakeholder Engagement Plan (Draft Version 1.0)
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/projects/SCERHSPP/SEPdraftVer01.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 3 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">09</p>
+                    <p class="tableColumn1BottomTextStyle">MAY</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      Environmental and Social Management Framework-Annexes (Draft Version 1.0)
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/projects/SCERHSPP/ESMF-AnnexesDraftVer01.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 4 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">09</p>
+                    <p class="tableColumn1BottomTextStyle">MAY</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      Sri Lanka Covid - 19 Emergency Response and Health Systems Preparedness 
+                      Project Labor Management Procedure (Draft Version 1.0)
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/projects/SCERHSPP/LMPdraftVer01.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 5 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">28</p>
+                    <p class="tableColumn1BottomTextStyle">APR</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      Development of E-Learning Module for Comprehensive Sexual Education 
+                      for the University Students
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/publications/publicNotices/GeneralNotice/2020/E-LearningUniversityStudents.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 6 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">27</p>
+                    <p class="tableColumn1BottomTextStyle">APR</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      Call for Competitive Small Grant proposals for Primary Health Care Service Delivery
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/publications/publicNotices/GeneralNotice/2020/pssp.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 7 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">11</p>
+                    <p class="tableColumn1BottomTextStyle">APR</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      ඇඳිරි නීති බලපත්‍ර නිකුත් කිරීම සම්බන්ධ උපදෙස්
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/news/2020/CerfiwPass11042020.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+                <tr> <!-- STAFF NOTICE TABLE - ROW 8 -->
+                  <td class="tableColumn1Style">
+                    <p class="tableColumn1TopTextStyle">09</p>
+                    <p class="tableColumn1BottomTextStyle">APR</p>
+                  </td>
+                  <td class="tableColumn2Style">
+                    <p>
+                      TENDER NOTICE - Supply of Medical Equipment & Laboratory Equipment at Teaching Hospital Batticaloa
+                    </p>
+                  </td>
+                  <td class="tableColumn3Style">
+                    <button type="button" class="btn btn-outline-info btn-sm tableButtonStyle" 
+                      onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/publications/publicNotices/Tender/2020/TH-Batticaloa.pdf', '_blank');">
+                      <b>Read More</b>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- BODY SECTION - End -->
+
+      <!-- FOOTER SECTION - Begin -->
+      <div id="footer">
+        <h3>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h3>
+      </div>
+      <!-- FOOTER SECTION - End -->
+
+    <!-- MAIN CONTENT SECTION - End -->
+
+  </body>
+</html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Information Officers (RTI Act)</title>
+    <title>Ministry Of Health - Information Officers (RTI Act)</title>
 
     <!-- Importing styles for default header and footer sections -->
     <link rel="stylesheet" type="text/css" href="assets/css/defaultHeaderFooterStyles.css">
@@ -14,8 +14,10 @@
     <script src="assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
     <script src="assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
     <script src="assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
-    <!-- Importing google fonts from online -->
+    <!-- Importing google fonts from the web -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from the web -->  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!-- MAIN CONTENT SECTION - Begin -->
@@ -88,6 +90,28 @@
                     position: relative;
                     left: 50px;
                     top: 30px;"><b>Information Officers (Right to Information Act)</b></h2>
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="Click on the 'DOWNLOAD' button to download a document"
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+          <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();   
+            });
+          </script>
           <!-- CARD TILE 1 -->
           <div style="width: 90%;
                       height: 100px;
@@ -97,7 +121,7 @@
                       top: 70px;
                       left: 50%;
                       transform: translateX(-50%);">
-            <p style="width: 80%;
+            <p style="width: 73%;
                       height: 30px;
                       text-align: justify;
                       position: relative;
@@ -108,21 +132,22 @@
                       font-size: 19px;">
               2016 අංක 12 දරණ ‍තොරතුරු දැනගැනී‍මේ අයිතිවාසිකම පිළිබඳ පන‍තේ 8 වන වගන්තිය යට‍තේ ප්‍රකාශයට පත් කල යුතු අර්ධ වාර්ෂික වාර්තාව	
             </p>
-            <button style="width: 100px;
-                        height: 50px;
-                        border-radius: 5px;
-                        background-color: #3880ff;
-                        position: absolute;
-                        top: 50%;
-                        right: 20px;
-                        transform: translateY(-50%);
-                        border: none;">
-              <p style="color: #ffffff;
-                        font-family:Verdana, Geneva, Tahoma, sans-serif;
-                        font-size: 17px;
-                        margin-top: 11px;">
-                        Download
-              </p>
+            <button class="btn btn-primary" style="width: 150px;
+                                                  height: 50px;
+                                                  border-radius: 5px;
+                                                  position: absolute;
+                                                  top: 50%;
+                                                  right: 20px;
+                                                  transform: translateY(-50%);"
+            onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/StaffNotices/2019/Batch896.pdf', '_blank');">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 14px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD</p>
             </button>
           </div>
           <!-- CARD TILE 2 -->
@@ -145,21 +170,22 @@
                       font-size: 19px;">
               Information Officers
             </p>
-            <button style="width: 100px;
-                        height: 50px;
-                        border-radius: 5px;
-                        background-color: #3880ff;
-                        position: absolute;
-                        top: 50%;
-                        right: 20px;
-                        transform: translateY(-50%);
-                        border: none;">
-              <p style="color: #ffffff;
-                        font-family:Verdana, Geneva, Tahoma, sans-serif;
-                        font-size: 17px;
-                        margin-top: 11px;">
-                        Download
-              </p>
+            <button class="btn btn-primary" style="width: 150px;
+                                                  height: 50px;
+                                                  border-radius: 5px;
+                                                  position: absolute;
+                                                  top: 50%;
+                                                  right: 20px;
+                                                  transform: translateY(-50%);"
+            onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/StaffNotices/2019/NewAct-12-2016Information-2.pdf', '_blank');">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 14px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD</p>
             </button>
           </div>
           <!-- CARD TILE 3 -->
@@ -182,21 +208,22 @@
                       font-size: 19px;">
               Right to Information Act Forms		
             </p>
-            <button style="width: 100px;
-                        height: 50px;
-                        border-radius: 5px;
-                        background-color: #3880ff;
-                        position: absolute;
-                        top: 50%;
-                        right: 20px;
-                        transform: translateY(-50%);
-                        border: none;">
-              <p style="color: #ffffff;
-                        font-family:Verdana, Geneva, Tahoma, sans-serif;
-                        font-size: 17px;
-                        margin-top: 11px;">
-                        Download
-              </p>
+            <button class="btn btn-primary" style="width: 150px;
+                                                  height: 50px;
+                                                  border-radius: 5px;
+                                                  position: absolute;
+                                                  top: 50%;
+                                                  right: 20px;
+                                                  transform: translateY(-50%);"
+            onclick="window.open('https://rti.gov.lk/rti-forms', '_blank');">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 14px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD</p>
             </button>
           </div>
         </div>

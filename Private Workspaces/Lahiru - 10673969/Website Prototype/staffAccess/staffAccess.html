@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Information Officers (RTI Act)</title>
+    <title>Ministry Of Health - Staff Access</title>
 
     <!-- Importing styles for default header and footer sections -->
     <link rel="stylesheet" type="text/css" href="./../assets/css/defaultHeaderFooterStyles.css">
     <!-- Importing fontawesome from localhost -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/font-awesome-v4.7.0/css/font-awesome.min.css">
     <!-- Importing files necessary for bootstrap from localhost -->
     <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
     <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
@@ -18,11 +18,13 @@
     <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
     <!-- Importing google fonts from online -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <!-- Page load alert box -->
-    <script>/*
+    <!-- Importing google icons from online -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Page load alert box - staff access only -->
+    <script>
       $(document).ready(function(){
         alert('WEBPAGE ONLY FOR STAFF MEMBERS');
-      });*/
+      });
     </script>
   </head>
   <body>
@@ -118,7 +120,34 @@
                     left: 50px;
                     top: 30px;"><b>Staff Access</b></h2>
 
-            <!-- CSS GRID STYLE - TILES STYLES -->
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="Click on a tile to access the get more information.<br>
+                        How to get more information on a recent notice?<br>
+                        Next to each recent notice there is a 'Read More' button, click this."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+          <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();   
+            });
+          </script>
+
+
+          <!-- CSS GRID STYLE - TILES STYLES -->
           <style>
             .grid1ItemText{
               font-size: 20px;
@@ -129,7 +158,7 @@
               letter-spacing: 3px;
             }
   
-            .tileGridContainer1 {
+            .tileGridContainer1{
               width: 90%;
               height: 570px;
               position: relative;
@@ -143,7 +172,7 @@
               background-color: #ffffff;
             }
   
-            .tileGridItem1 {
+            .tileGridItem1{
               background-color: #2196F3;
               padding: 20px;
               font-size: 30px;
@@ -152,7 +181,7 @@
               border: none;
             }
   
-            .tileGridContainer2 {
+            .tileGridContainer2{
               width: 90%;
               height: auto;
               position: relative;
@@ -166,7 +195,7 @@
               background-color:#ffffff;
             }
   
-            .tileGridItem2 {
+            .tileGridItem2{
               background-color: #2196F3;
               padding: 20px;
               font-size: 30px;
@@ -194,47 +223,55 @@
             <!-- CARD 2 - TILES SECTION 1 - CONTAINER -->
             <div class="tileGridContainer1">
                 <!-- CARD 2 - TILES SECTION 1 - ITEMS -->
-                <button class="btn tileGridItem1" style="background-color: #06539bff;"
+                <!-- ITEM 1 -->
+                <button class="btn tileGridItem1" style="background-color: #06539bff;" 
                   data-toggle="modal" data-target="#adminModal">
                   <i class="fa fa-user-circle-o fa-5x" style="color: #ffffff;
                                                               font-size: 150px;"></i>
                   <p class="grid1ItemText">ADMIN</p>
                 </button>
+                <!-- ITEM 2 -->
                 <button class="btn tileGridItem1" style="background-color: #0d3155ff;"
                   data-toggle="modal" data-target="#trainingModal">
                   <i class="fa fa-users fa-4x" style="color: #ffffff;
                                                       margin-top: 15px;"></i>
                   <p class="grid1ItemText" style="margin-top: 15px;">TRAINING</p>
                 </button>
+                <!-- ITEM 3 -->
                 <button class="btn tileGridItem1" style="background-color: #2684dcff;"
                   onclick="window.open('http://www.health.gov.lk/CMS/cmsmoh1', '_blank');">
                   <i class="fa fa-medkit fa-5x" style="color: #ffffff;
                                                       font-size: 140px;"></i>
                   <p class="grid1ItemText" style="margin-top: -10px;">HEALTH<br>CIRCULAR</p>
                 </button>  
+                <!-- ITEM 4 -->
                 <button class="btn tileGridItem1" style="background-color: #1690ffff;"
-                  onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=181', '_blank');">
+                  onclick="window.open('./staffAccess-OtherCirculars.html', '_blank');">
                   <i class="fa fa-archive fa-5x" style="color: #ffffff;
                                                         font-size: 140px;"></i>
                   <p class="grid1ItemText" style="margin-top: -10px;">OTHER<br>CIRCULAR</p>
                 </button>
+                <!-- ITEM 5 -->
                 <button class="btn tileGridItem1" style="background-color: #a2cff8ff;"
                   data-toggle="modal" data-target="#researchModal">
                   <i class="fa fa-search fa-5x" style="color: #ffffff;"></i>
                   <p class="grid1ItemText">RESEARCH</p>
                 </button>
+                <!-- ITEM 6 -->
                 <button class="btn tileGridItem1" style="background-color: #2684dcff;"
-                  onclick="window.open('http://www.health.gov.lk/moh_final/english/staff_notices.php', '_blank');">
+                  onclick="window.open('./staffAccess-StaffNotices.html', '_blank');">
                   <i class="fa fa-file-text-o fa-5x" style="color: #ffffff;
                                                             font-size: 130px;
                                                             margin-top: 10px;"></i>
                   <p class="grid1ItemText" style="margin-top: -10px;">STAFF<br>NOTICES</p>
                 </button>
+                <!-- ITEM 7 -->
                 <button class="btn tileGridItem1" style="background-color: #0d3155ff;"
                   data-toggle="modal" data-target="#webSystemsModal">
                   <i class="fa fa-globe fa-5x" style="color: #ffffff;"></i>
                   <p class="grid1ItemText" style="margin-top: -20px;">WEB<br>SYSTEMS</p>
                 </button>
+                <!-- ITEM 8 -->
                 <button class="btn tileGridItem1" style="background-color: #06539bff;"
                   onclick="window.open('http://www.health.gov.lk/moh_final/english/public/elfinder/files/telephoneDirectory/Tele%20directory%202020%20Draft11.pdf', '_blank');">
                   <i class="fa fa-book fa-5x" style="color: #ffffff;
@@ -245,20 +282,23 @@
             </div>
             <div class="tileGridContainer2">
               <!-- CARD 2 - TILES SECTION 1 - ITEMS -->
+              <!-- ITEM 1 -->
               <button class="btn tileGridItem2" style="background-color: #1690ffff;"
-                onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=142', '_blank');">
+                onclick="window.open('./staffAccess-Download.html', '_blank');">
                 <i class="fa fa-download fa-5x grid2ItemIcon" style="color: #ffffff;
                                                                     font-size: 140px;"></i>
                 <p class="grid2ItemText">DOWNLOAD</p>
               </button>
+              <!-- ITEM 2 -->
               <button class="btn tileGridItem2" style="background-color: #06539bff;"
-                onclick="window.open('http://www.health.gov.lk/moh_final/english/staff.php', '_blank');">
+                onclick="window.open('./staffAccess-Projects.html', '_blank');">
                 <i class="fa fa-folder-o fa-5x grid2ItemIcon" style="color: #ffffff;
                                                                     font-size: 140px;"></i>
                 <p class="grid2ItemText" style="margin-top: 5px;">PROJECTS</p>
               </button>
+              <!-- ITEM 3 -->
               <button class="btn tileGridItem2" style="background-color: #2684dcff;"
-                onclick="window.open('http://www.health.gov.lk/moh_final/english/calander.php', '_blank');">
+                onclick="window.open('./staffAccess-ScheduleCalendar.html', '_blank');">
                 <i class="fa fa-calendar fa-5x grid2ItemIcon" style="color: #ffffff;
                                                                     margin-top: -5px;
                                                                     font-size: 130px;"></i>
