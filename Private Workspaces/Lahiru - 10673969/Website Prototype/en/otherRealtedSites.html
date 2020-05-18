@@ -1,0 +1,825 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Setting responsive viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ministry Of Health - Other Related Sites</title>
+
+    <!-- FAVICON ICON -->
+    <link rel="icon" type="image/png" href="../assets/images/Logo.png">
+    <!-- Importing google fonts from the internet -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from the internet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Importing CSS files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <!-- Importing styles for default header and footer sections from localhost -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/defaultHeaderFooterStyles.css">
+  </head>
+  <body>
+    <!-- MAIN CONTENT SECTION - Begin -->
+      <!-- HEADER SECTION - Begin -->
+      <div id="header">
+        <div id="headerContent">
+          <div id="headerMenu">
+            <button class="languageSelection btn" id="languageSelectionEnglish">
+              <p>English</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionSinhala">
+              <p>සිංහල</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionTamil">
+              <p>தமிழ்</p> 
+            </button>
+            <h1 id="mainTitle">MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h1>
+            <form>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+                <img src="../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+              </button>
+            </form>
+          </div>
+          <div id="headerMenuBar">
+            <button class="menuItem btn" id="menuTileStyle">
+              <p>Wellbeing</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Lifestyle</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Travelers</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Notices</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Contact</p>
+            </button>
+            <button class="menuItem btn" id="menuItemLogin">
+              <p>LOGIN</p>
+            </button>
+          </div>
+        </div>
+        <div id="headerBanner">
+          <h1>HEALTH ALERT</h1>
+          <p>Take precautions provided by Ministry of Health</p>
+        </div>
+      </div>
+      <!-- HEADER SECTION - End -->
+
+      <!-- BODY SECTION - Begin -->
+      <div style="width: 100%;
+                  height: auto;
+                  padding-bottom: 150px;
+                  background-color: rgb(241, 241, 241);">
+
+        <!-- BODY CONTENT SECTION - CARD -->
+        <div style="width: 60%;
+                    height: auto;
+                    background-color: #ffffff;
+                    position: relative;
+                    left: 50%;
+                    top: 50px;
+                    padding-bottom: 100px;
+                    transform: translateX(-50%);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+          <!-- CARD HEADING -->
+          <h2 style="font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    position: relative;
+                    left: 50px;
+                    top: 30px;"><b>Other Related Sites</b></h2>
+
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="Click on a blue drop down to reveal the options.<br>
+                        Click on one of these options to access more information."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- CARD TILE SECTION -->
+          <div style="width: 85%;
+                      height: 80%;
+                      position: relative;
+                      left: 50%;
+                      top: 40px;
+                      transform: translateX(-50%);">
+            
+            <!-- CARD TILE STYLES -->
+            <style>
+              .cardTileStyle{
+                height: 60px;
+                width: 100%;
+                position: relative;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 30px;
+                background-color: #3880ff;
+              }
+
+              .cardTileHeadingStyle{
+                font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 19px;
+                color: #ffffff;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
+
+              .cardTileUpwardArrow{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+
+              .cardTileDownwardArrow{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+
+              .cardSubtileStyle{
+                width: 85%;
+                background-color: #ffffff;
+                margin-top: 15px;
+                border-radius: 20px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+
+              .cardSubtileRowStyle{
+                height: 55px;
+                width: 100%;
+                border-bottom: #ffffff 1px solid;
+              }
+
+              .btn-outline-secondary{
+                background-color:#646464;
+                color: #ffffff;
+              }
+
+              .btn-outline-secondary:hover{
+                background-color: #ffffff;
+                color: #646464;
+              }
+
+
+              .cardSubtileRowHeading{
+                font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 19px;
+                width: 100%;
+                position: relative;
+                top: 5px;
+                text-align: center;
+              }
+            </style>
+            
+            <!-- CARD TILE 1 -->
+            <button class="btn cardTileStyle" type="button" data-toggle="collapse" data-target="#cardTile1Subtitle" onclick="loadArrowIcon(1)">
+              <p class="cardTileHeadingStyle">
+                PROGRAMMES, CAMPAIGNS AND SPECIALIZED UNITS
+              </p>
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile1">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile1">                                                                                                                     
+            </button>
+
+                <!-- CARD TILE 1 - SUBTILE -->
+                <div class="collapse cardSubtileStyle" id="cardTile1Subtitle">
+                                                                    
+                  <!-- CARD TILE 1 - SUBTILE - ROW 1 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.filariasiscampaign.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Anti Filariasis Campaigns
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 2 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.leprosycampaign.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Anti Leprosy Campaigns
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 3 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://amc.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Anti Malaria Campaigns
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 4 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.mentalhealth.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Directorate of Mental Health
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 5 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.epid.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Epidemiology Unit
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 6 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.familyhealth.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Family Health Bureau
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 7 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.hpb.health.gov.lk//', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Health Promotion Bureau
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 8 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=139', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Ministry of Health Library
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 9 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.dengue.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Dengue Control Unit
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 10 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.aidscontrol.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National STD/AIDS Control Programme
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 11 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.rabies.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Public Health Veterinary Services
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 12 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nccp.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Cancer Control Programme
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 13 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=35', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Programme for Tuberculosis Control and Chest Diseases
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 14 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.quarantine.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Quarantine Unit
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 1 - SUBTILE - ROW 15 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.wkmh.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Wijaya Kumaratunga Memorial Hospital
+                    </p>
+                  </button>
+
+                </div>
+
+
+            <!-- CARD TILE 2 -->
+            <button class="btn cardTileStyle" style="margin-top: 10px;" type="button" data-toggle="collapse" data-target="#cardTile2Subtitle" onclick="loadArrowIcon(2)">
+              <p class="cardTileHeadingStyle">
+                OTHER LINKS
+              </p>
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile2">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile2"> 
+            </button>
+
+                <!-- CARD TILE 2 - SUBTILE -->
+                <div class="collapse cardSubtileStyle" id="cardTile2Subtitle">
+                                                                  
+                  <!-- CARD TILE 2 - SUBTILE - ROW 1 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.dental.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Dental Services
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 2 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.eohfs.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Environmental Health, Occupational Health and Food Safety Unit
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 3 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.healthfund.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Health Development Fund
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 4 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://hiu.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Health Information Unit
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 5 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.lankaphein.com/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      LANKAPHEIN
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 6 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=139', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Library of Ministry of Health
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 7 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.mri.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Medical Research Institute
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 8 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.migrationhealth.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Migration, Health & Development
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 9 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=148', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Nutrition Division
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 10 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nbts.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Blood Transfusion Service
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 11 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.ncisl.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Cancer Institute
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 12 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://nihs.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Institute of Health Sciences
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 13 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nimh.health.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Institute of Mental Health
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 14 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.healthfund.gov.lkhttp//203.94.76.60/NPDIC/index.html', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Poison and Drug Information Centre
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 15 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.health.gov.lk/enWeb/NCD/index.php', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Non Communicable Diseases Unit
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 16 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nicslk.com/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Intensive Care Surveillance (NICS)
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 17 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.nics-training.com/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      NICS – Training
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 18 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.vision2020.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Vision 2020 - National Programme for Prevention of Blindness
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 2 - SUBTILE - ROW 19 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.health.gov.lk/moh_final/english/others.php?pid=200', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      National Health Development Fund
+                    </p>
+                  </button>
+
+                </div>
+
+
+            <!-- CARD TILE 3 -->
+            <button class="btn cardTileStyle" style="margin-top: 10px;" type="button" data-toggle="collapse" data-target="#cardTile3Subtitle" onclick="loadArrowIcon(3)">
+              <p class="cardTileHeadingStyle">
+                USEFUL SITES
+              </p>
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile3">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile3"> 
+            </button>
+
+                <!-- CARD TILE 3 - SUBTILE -->
+                <div class="collapse cardSubtileStyle" id="cardTile3Subtitle">
+                                                                  
+                  <!-- CARD TILE 3 - SUBTILE - ROW 1 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Government of SRI LANKA
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 3 - SUBTILE - ROW 2 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.jica.go.jp/english', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      J I C A
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 3 - SUBTILE - ROW 3 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.phsrc.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Private Health Services Regulatory Council
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 3 - SUBTILE - ROW 4 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.unicef.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      U N I C E F
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 3 - SUBTILE - ROW 5 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.searo.who.int/srilanka//en/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      WHO - SRI LANKA
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 3 - SUBTILE - ROW 6 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.who.int/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      World Health Organization
+                    </p>
+                  </button>
+
+                </div>
+
+
+            <!-- CARD TILE 4 -->
+            <button class="btn cardTileStyle" style="margin-top: 10px;" type="button" data-toggle="collapse" data-target="#cardTile4Subtitle" onclick="loadArrowIcon(4)">
+              <p class="cardTileHeadingStyle">
+                HEALTH RELATED PROFESSIONAL COLLEGES
+              </p>
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile4">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile4"> 
+            </button>
+
+                <!-- CARD TILE 4 - SUBTILE -->
+                <div class="collapse cardSubtileStyle" id="cardTile4Subtitle">
+                                                                    
+                  <!-- CARD TILE 4 - SUBTILE - ROW 1 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.slcpsych.lk/site', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Sri Lanka College of Psychiatrists
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 2 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.cosl.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of Ophthalmologists of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 3 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.impa-lk.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Independent Medical Practitioners Association
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 4 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.cmasl.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of Medical Administrators of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 5 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.hissl.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Health Information Society of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 6 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.fosme.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Sri Lankan Medical Educations
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 7 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.diabetessrilanka.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Diabetes Association of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 8 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://slmicrobiology.net/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of Microbiologists
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 9 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.lankasurgeons.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      The College of Surgeons of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 10 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.collegeofpathologists.com/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of Pathologists of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 11 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.cgpsl.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of General Practitioners of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 12 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.slheart.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Sri Lanka Heart Association
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 13 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.anaesthesia.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of Anaesthesiologists and Intensivist of Sri Lanka
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 14 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.resuslanka.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Working Committee on Resuscitation
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 4 - SUBTILE - ROW 15 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.cfpsl.org/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      College of Forensic Pathologists of Sri Lanka
+                    </p>
+                  </button>
+
+                </div>
+
+                
+            <!-- CARD TILE 5 -->
+            <button class="btn cardTileStyle" style="margin-top: 10px;" type="button" data-toggle="collapse" data-target="#cardTile5Subtitle" onclick="loadArrowIcon(5)">
+              <p class="cardTileHeadingStyle">
+                CORPORATIONS
+              </p>
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile5">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile5"> 
+            </button>
+
+                <!-- CARD TILE 5 - SUBTILE -->
+                <div class="collapse cardSubtileStyle" id="cardTile5Subtitle">
+                                                                    
+                  <!-- CARD TILE 5 - SUBTILE - ROW 1 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.spmclanka.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      Pharmaceuticals Manufacturing
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 5 - SUBTILE - ROW 2 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.spc.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      State Pharmaceuticals Campaign
+                    </p>
+                  </button>
+
+                </div>
+
+
+            <!-- CARD TILE 6 -->
+            <button class="btn cardTileStyle" style="margin-top: 10px;" type="button" data-toggle="collapse" data-target="#cardTile6Subtitle" onclick="loadArrowIcon(6)">
+              <p class="cardTileHeadingStyle">
+                PRESIDENTIAL SECRETARIAT
+              </p>
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile6">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile6"> 
+            </button>
+
+                <!-- CARD TILE 6 - SUBTILE -->
+                <div class="collapse cardSubtileStyle" id="cardTile6Subtitle">
+                                                                    
+                  <!-- CARD TILE 6 - SUBTILE - ROW 1 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 20px 20px 0px 0px;" onclick="window.open('http://www.president.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      www.president.gov.lk
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 6 - SUBTILE - ROW 2 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" onclick="window.open('http://www.pmdnews.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      www.pmdnews.lk
+                    </p>
+                  </button>
+
+                  <!-- CARD TILE 6 - SUBTILE - ROW 3 -->
+                  <button class="btn btn-outline-secondary cardSubtileRowStyle" style="border-radius: 0px 0px 20px 20px;" onclick="window.open('http://www.presidentsoffice.gov.lk/', '_blank');">
+                    <p class="cardSubtileRowHeading">
+                      www.presidentsoffice.gov.lk
+                    </p>
+                  </button>
+
+                </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- BODY SECTION - End -->
+
+      <!-- FOOTER SECTION - Begin -->
+      <div id="footer">
+        <h3>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h3>
+      </div>
+      <!-- FOOTER SECTION - End -->
+
+    <!-- MAIN CONTENT SECTION - End -->
+
+    <!-- 
+      Importing JS files necessary for bootstrap from localhost - 
+      Imported at the bottom for webpage content to load faster 
+    -->
+    <script src="../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+    </script>
+    <!-- CARD TILE ARROW ICON JAVASCRIPT FUNCTION -->
+    <script>
+      /* 
+        FUNCTION'S PURPOSE - 
+          Get the IDs of the arrow icon in each tile and depending on the tile number, if the upward arrow is hidden, 
+          this would be shown and the downward arrow will be hidden.
+          This will happen vise versa as well.
+      */
+      function loadArrowIcon(tileNumber){
+        var downwardArrowTile1 = document.getElementById("downwardArrowTile1");
+        var upwardArrowTile1 = document.getElementById("upwardArrowTile1");
+
+        var downwardArrowTile2 = document.getElementById("downwardArrowTile2");
+        var upwardArrowTile2 = document.getElementById("upwardArrowTile2");
+
+        var downwardArrowTile3 = document.getElementById("downwardArrowTile3");
+        var upwardArrowTile3 = document.getElementById("upwardArrowTile3");
+
+        var downwardArrowTile4 = document.getElementById("downwardArrowTile4");
+        var upwardArrowTile4 = document.getElementById("upwardArrowTile4");
+
+        var downwardArrowTile5 = document.getElementById("downwardArrowTile5");
+        var upwardArrowTile5 = document.getElementById("upwardArrowTile5");
+
+        var downwardArrowTile6 = document.getElementById("downwardArrowTile6");
+        var upwardArrowTile6 = document.getElementById("upwardArrowTile6");
+
+        if(tileNumber == 1){
+          if(downwardArrowTile1.style.display == "inline"){
+            upwardArrowTile1.style.display = "inline";
+            downwardArrowTile1.style.display = "none";
+          }
+          else if(downwardArrowTile1.style.display == "none"){
+            downwardArrowTile1.style.display = "inline";
+            upwardArrowTile1.style.display = "none";
+          }
+        }
+        else if(tileNumber == 2){
+          if(downwardArrowTile2.style.display == "inline"){
+            upwardArrowTile2.style.display = "inline";
+            downwardArrowTile2.style.display = "none";
+          }
+          else if(downwardArrowTile2.style.display == "none"){
+            downwardArrowTile2.style.display = "inline";
+            upwardArrowTile2.style.display = "none";
+          }
+        }
+        else if(tileNumber == 3){
+          if(downwardArrowTile3.style.display == "inline"){
+            upwardArrowTile3.style.display = "inline";
+            downwardArrowTile3.style.display = "none";
+          }
+          else if(downwardArrowTile3.style.display == "none"){
+            downwardArrowTile3.style.display = "inline";
+            upwardArrowTile3.style.display = "none";
+          }
+        }
+        else if(tileNumber == 4){
+          if(downwardArrowTile4.style.display == "inline"){
+            upwardArrowTile4.style.display = "inline";
+            downwardArrowTile4.style.display = "none";
+          }
+          else if(downwardArrowTile4.style.display == "none"){
+            downwardArrowTile4.style.display = "inline";
+            upwardArrowTile4.style.display = "none";
+          }
+        }
+        else if(tileNumber == 5){
+          if(downwardArrowTile5.style.display == "inline"){
+            upwardArrowTile5.style.display = "inline";
+            downwardArrowTile5.style.display = "none";
+          }
+          else if(downwardArrowTile5.style.display == "none"){
+            downwardArrowTile5.style.display = "inline";
+            upwardArrowTile5.style.display = "none";
+          }
+        }
+        else if(tileNumber == 6){
+          if(downwardArrowTile6.style.display == "inline"){
+            upwardArrowTile6.style.display = "inline";
+            downwardArrowTile6.style.display = "none";
+          }
+          else if(downwardArrowTile6.style.display == "none"){
+            downwardArrowTile6.style.display = "inline";
+            upwardArrowTile6.style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

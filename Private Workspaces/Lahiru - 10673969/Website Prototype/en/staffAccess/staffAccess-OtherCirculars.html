@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Setting responsive viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ministry Of Health - Other Circulars</title>
+
+    <!-- FAVICON ICON -->
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+    <!-- Importing google fonts from the internet -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from the internet -->  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Importing CSS files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <!-- Importing styles for default header and footer sections from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/defaultHeaderFooterStyles.css">
+  </head>
+  <body>
+    <!-- MAIN CONTENT SECTION - Begin -->
+      <!-- HEADER SECTION - Begin -->
+      <div id="header">
+        <div id="headerContent">
+          <div id="headerMenu">
+            <button class="languageSelection btn" id="languageSelectionEnglish">
+              <p>English</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionSinhala">
+              <p>සිංහල</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionTamil">
+              <p>தமிழ்</p> 
+            </button>
+            <h1 id="mainTitle">MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h1>
+            <form>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+                <img src="../../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+              </button>
+            </form>
+          </div>
+          <div id="headerMenuBar">
+            <button class="menuItem btn" id="menuTileStyle">
+              <p>Wellbeing</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Lifestyle</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Travelers</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Notices</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Contact</p>
+            </button>
+            <button class="menuItem btn" id="menuItemLogin">
+              <p>LOGIN</p>
+            </button>
+          </div>
+        </div>
+        <div id="headerBanner">
+          <h1>HEALTH ALERT</h1>
+          <p>Take precautions provided by Ministry of Health</p>
+        </div>
+      </div>
+      <!-- HEADER SECTION - End -->
+      
+      <!-- BODY SECTION - Begin -->
+      <div style="width: 100%;
+                  height: auto;
+                  padding-bottom: 150px;
+                  background-color: rgb(241, 241, 241);">
+
+        <!-- BODY CONTENT SECTION - CARD -->
+        <div style="width: 60%;
+                    height: auto;
+                    background-color: #ffffff;
+                    position: relative;
+                    left: 50%;
+                    top: 50px;
+                    padding-bottom: 100px;
+                    transform: translateX(-50%);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="How to access a webpage or download a document?<br>
+                        Download a Document: <br />Click on a 'DOWNLOAD BUTTON'.<br />
+                        Access a Webpage: <br />Select a preferred language from a drop-down."
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <!-- CARD HEADING -->
+          <h2 style="font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    position: relative;
+                    left: 50px;
+                    top: 30px;"><b>Other Circulars</b></h2>
+
+          <!-- CSS - CARD STYLES -->
+          <style>
+
+            .cardStyle{
+              width: 90%;
+              height: 100px;
+              border-radius: 15px;
+              position: relative;
+              top: 50px;
+              left: 50%;
+              transform: translateX(-50%);
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .cardTextStyle{
+              width: 65%;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 20px;
+              text-align: justify;
+              letter-spacing: 1px;
+              font-size: 18px;
+              color: rgb(0, 0, 0);
+              font-weight: 500;
+            }
+
+            .cardSelectStyle{
+              height: 50px;
+              width: 235px;
+              position: absolute;
+              right: 30px;
+              top: 50%;
+              transform: translateY(-50%);
+              border-radius: 5px;
+              letter-spacing: 1px;
+            }
+
+            .cardDownloadButtonStyle{
+              height: 50px;
+              width: 235px;
+              position: absolute;
+              right: 30px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            select:required:invalid{
+              color: gray;
+            }
+
+            option[value=""][disabled]{
+              display: none;
+            }
+
+            option{
+              color: black;
+            }
+
+          </style>
+
+          <!-- SUB CARD 1 -->
+          <div class="cardStyle">
+            <p class="cardTextStyle">
+              කොරෝනා වෛරසය ශ්‍රී ලංකාවෙන් තුරන් කිරීම රාජ්‍ය පරිපාලන, ස්වදේශ කටයුතු, 
+              පළාත් සභා හා පළාත් පාලන අමාත්‍යාංශය (HAF 10/2020) 2020-03-15
+            </p>
+
+            <button class="btn btn-primary cardDownloadButtonStyle"
+            onclick="window.location.href = 'http://www.pubad.gov.lk/web/index.php?option=com_circular&view=circulars&Itemid=176&lang=si'">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 10px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD IN SINHALA</p>
+            </button>
+          </div>
+
+
+          <!-- SUB CARD 2 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              Medico Legal Services - Circulars
+            </p>
+
+            <button class="btn btn-primary cardDownloadButtonStyle"
+            onclick="window.location.href = 'http://www.health.gov.lk/moh_final/english/others.php?pid=207'">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 10px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD IN ENGLISH</p>
+            </button>
+          </div>
+
+
+          <!-- SUB CARD 3 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              Head covering worn by muslim women	
+            </p>
+
+            <button class="btn btn-primary cardDownloadButtonStyle"
+            onclick="window.location.href = 'http://www.health.gov.lk/moh_final/english/public/elfinder/files/Downloade/Batch937.pdf'">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 10px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD IN ENGLISH</p>
+            </button>
+          </div>
+
+
+          <!-- SUB CARD 4 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              කාන්තාවන්ගේ ඇදුම් පැළදුම් මත පදනම්ව ඔවුන්ගේ ප්‍රවේශ වීමේ අයිතිය අහිමි කිරීම	
+            </p>
+
+            <button class="btn btn-primary cardDownloadButtonStyle"
+            onclick="window.location.href = 'http://www.health.gov.lk/moh_final/english/public/elfinder/files/Downloade/Batch936.pdf'">
+              <span class="material-icons" style="position: absolute;
+                                                  left: 10px;
+                                                  top: 12px;">
+                get_app
+              </span>
+              <p style="position: absolute;
+                        right: 10px;
+                        top: 10px;">DOWNLOAD IN SINHALA</p>
+            </button>
+          </div>
+
+
+          <!-- SUB CARD 5 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              Ministry of Public Administration and Disaster Management
+            </p>
+
+            <select required title="SELECT LANGUAGE AND CLICK DOWNLOAD" id="subCard5Select" onchange="subCard5Select()" class="cardSelectStyle">
+              <option value="" selected>SELECT LANGUAGE</option>
+              <option value="ENGLISH"><p>ENGLISH</p></option>
+              <option value="SINHALA">SINHALA</option>
+              <option value="TAMIL">TAMIL</option>
+            </select>
+          </div>
+
+
+          <!-- SUB CARD 6 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              Ministry of Finance
+            </p>
+
+            <select required title="SELECT LANGUAGE AND CLICK DOWNLOAD" id="subCard6Select" onchange="subCard6Select()" class="cardSelectStyle">
+              <option value="" selected>SELECT LANGUAGE</option>
+              <option value="ENGLISH"><p>ENGLISH</p></option>
+              <option value="SINHALA">SINHALA</option>
+              <option value="TAMIL">TAMIL</option>
+            </select>
+          </div>
+
+
+          <!-- SUB CARD 7 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              Public Service Commission
+            </p>
+
+            <select required title="SELECT LANGUAGE AND CLICK DOWNLOAD" id="subCard7Select" onchange="subCard7Select()" class="cardSelectStyle">
+              <option value="" selected>SELECT LANGUAGE</option>
+              <option value="ENGLISH"><p>ENGLISH</p></option>
+              <option value="SINHALA">SINHALA</option>
+              <option value="TAMIL">TAMIL</option>
+            </select>
+          </div>
+
+
+          <!-- SUB CARD 8 -->
+          <div class="cardStyle" style="margin-top: 20px;">
+            <p class="cardTextStyle">
+              Department of Pensions
+            </p>
+
+            <select required title="SELECT LANGUAGE AND CLICK DOWNLOAD" id="subCard8Select" onchange="subCard8Select()" class="cardSelectStyle">
+              <option value="" selected>SELECT LANGUAGE</option>
+              <option value="ENGLISH"><p>ENGLISH</p></option>
+              <option value="SINHALA">SINHALA</option>
+              <option value="TAMIL">TAMIL</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      <!-- BODY SECTION - End -->
+
+      <!-- FOOTER SECTION - Begin -->
+      <div id="footer">
+        <h3>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h3>
+      </div>
+      <!-- FOOTER SECTION - End -->
+
+    <!-- MAIN CONTENT SECTION - End -->
+
+    <!-- 
+      Importing JS files necessary for bootstrap from localhost - 
+      Imported at the bottom for webpage content to load faster 
+    -->
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+    </script>
+    <!-- JAVASCRIPT - CARD WEBPAGE REDIREcTING LINK FUNCTIONS  -->
+    <script>
+
+      function subCard5Select(){
+        var subCard5SelectValue = document.getElementById("subCard5Select").value;
+        if(subCard5SelectValue == "ENGLISH"){
+          window.open('http://www.pubad.gov.lk/web/index.php?option=com_circular&Itemid=109&lang=en', '_blank');
+        }
+        else if(subCard5SelectValue == "SINHALA"){
+          window.open('http://www.pubad.gov.lk/web/index.php?option=com_circular&Itemid=109&lang=si', '_blank');
+        }
+        else if(subCard5SelectValue == "TAMIL"){
+          window.open('http://www.pubad.gov.lk/web/index.php?option=com_circular&Itemid=109&lang=ta', '_blank');
+
+        }
+      }
+
+      function subCard6Select(){
+        var subCard6SelectValue = document.getElementById("subCard6Select").value;
+        if(subCard6SelectValue == "ENGLISH"){
+          window.open('http://www.treasury.gov.lk/web/guest/circulars-gazettes-acts', '_blank');
+        }
+        else if(subCard6SelectValue == "SINHALA"){
+          window.open('http://www.treasury.gov.lk/web/guest/circulars-gazettes-acts', '_blank');
+        }
+        else if(subCard6SelectValue == "TAMIL"){
+          window.open('http://www.treasury.gov.lk/web/guest/circulars-gazettes-acts', '_blank');
+        }
+      }
+
+      function subCard7Select(){
+        var subCard7SelectValue = document.getElementById("subCard7Select").value;
+        if(subCard7SelectValue == "ENGLISH"){
+          window.open('http://www.psc.gov.lk/web/index.php?option=com_content&view=category&id=75&Itemid=111&lang=en', '_blank');
+        }
+        else if(subCard7SelectValue == "SINHALA"){
+          window.open('http://www.psc.gov.lk/web/index.php?option=com_content&view=category&id=75&Itemid=111&lang=si', '_blank');
+        }
+        else if(subCard7SelectValue == "TAMIL"){
+          window.open('http://www.psc.gov.lk/web/index.php?option=com_content&view=category&id=75&Itemid=111&lang=ta', '_blank');
+        }
+      }
+
+      function subCard8Select(){
+        var subCard8SelectValue = document.getElementById("subCard8Select").value;
+        if(subCard8SelectValue == "ENGLISH"){
+          window.open('http://www.pensions.gov.lk/index.php/en/component/content/article?id=8', '_blank');
+        }
+        else if(subCard8SelectValue == "SINHALA"){
+          window.open('http://www.pensions.gov.lk/index.php/si-LK/component/content/article?id=9', '_blank');
+        }
+        else if(subCard8SelectValue == "TAMIL"){
+          window.open('http://www.pensions.gov.lk/index.php/ta-in/component/content/article?id=10', '_blank');
+        }
+      }
+
+    </script>
+  </body>
+</html>

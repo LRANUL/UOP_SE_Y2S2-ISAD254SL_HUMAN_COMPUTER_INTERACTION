@@ -7,17 +7,16 @@
 
     <title>Ministry Of Health - Other Related Sites</title>
 
-    <!-- Importing styles for default header and footer sections -->
-    <link rel="stylesheet" type="text/css" href="assets/css/defaultHeaderFooterStyles.css">
-    <!-- Importing files necessary for bootstrap from localhost -->
-    <link rel="stylesheet" type="text/css" href="assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
-    <script src="assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
-    <script src="assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
-    <script src="assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
-    <!-- Importing google fonts from the web -->
+    <!-- FAVICON ICON -->
+    <link rel="icon" type="image/png" href="../assets/images/Logo.png">
+    <!-- Importing google fonts from the internet -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <!-- Importing google icons from the web -->
+    <!-- Importing google icons from the internet -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Importing CSS files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <!-- Importing styles for default header and footer sections from localhost -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/defaultHeaderFooterStyles.css">
   </head>
   <body>
     <!-- MAIN CONTENT SECTION - Begin -->
@@ -38,7 +37,7 @@
             <form>
               <input type="text" id="searchInput" class="form-control" placeholder="Search">
               <button type="submit" id="searchButton" class="btn">
-                <img src="./assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+                <img src="../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
               </button>
             </form>
           </div>
@@ -112,13 +111,6 @@
               help
             </span>
           </button>
-
-          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
-          <script>
-            $(document).ready(function(){
-              $('[data-toggle="popover"]').popover();   
-            });
-          </script>
 
           <!-- CARD TILE SECTION -->
           <div style="width: 85%;
@@ -202,104 +194,14 @@
                 text-align: center;
               }
             </style>
-
-            <!-- CARD TILE ARROW ICON JAVASCRIPT FUNCTION -->
-            <script>
-              /* 
-                FUNCTION'S PURPOSE - 
-                  Get the IDs of the arrow icon in each tile and depending on the tile number, if the upward arrow is hidden, 
-                  this would be shown and the downward arrow will be hidden.
-                  This will happen vise versa as well.
-              */
-              function loadArrowIcon(tileNumber){
-                var downwardArrowTile1 = document.getElementById("downwardArrowTile1");
-                var upwardArrowTile1 = document.getElementById("upwardArrowTile1");
-
-                var downwardArrowTile2 = document.getElementById("downwardArrowTile2");
-                var upwardArrowTile2 = document.getElementById("upwardArrowTile2");
-
-                var downwardArrowTile3 = document.getElementById("downwardArrowTile3");
-                var upwardArrowTile3 = document.getElementById("upwardArrowTile3");
-
-                var downwardArrowTile4 = document.getElementById("downwardArrowTile4");
-                var upwardArrowTile4 = document.getElementById("upwardArrowTile4");
-
-                var downwardArrowTile5 = document.getElementById("downwardArrowTile5");
-                var upwardArrowTile5 = document.getElementById("upwardArrowTile5");
-
-                var downwardArrowTile6 = document.getElementById("downwardArrowTile6");
-                var upwardArrowTile6 = document.getElementById("upwardArrowTile6");
-
-                if(tileNumber == 1){
-                  if(downwardArrowTile1.style.display == "inline"){
-                    upwardArrowTile1.style.display = "inline";
-                    downwardArrowTile1.style.display = "none";
-                  }
-                  else if(downwardArrowTile1.style.display == "none"){
-                    downwardArrowTile1.style.display = "inline";
-                    upwardArrowTile1.style.display = "none";
-                  }
-                }
-                else if(tileNumber == 2){
-                  if(downwardArrowTile2.style.display == "inline"){
-                    upwardArrowTile2.style.display = "inline";
-                    downwardArrowTile2.style.display = "none";
-                  }
-                  else if(downwardArrowTile2.style.display == "none"){
-                    downwardArrowTile2.style.display = "inline";
-                    upwardArrowTile2.style.display = "none";
-                  }
-                }
-                else if(tileNumber == 3){
-                  if(downwardArrowTile3.style.display == "inline"){
-                    upwardArrowTile3.style.display = "inline";
-                    downwardArrowTile3.style.display = "none";
-                  }
-                  else if(downwardArrowTile3.style.display == "none"){
-                    downwardArrowTile3.style.display = "inline";
-                    upwardArrowTile3.style.display = "none";
-                  }
-                }
-                else if(tileNumber == 4){
-                  if(downwardArrowTile4.style.display == "inline"){
-                    upwardArrowTile4.style.display = "inline";
-                    downwardArrowTile4.style.display = "none";
-                  }
-                  else if(downwardArrowTile4.style.display == "none"){
-                    downwardArrowTile4.style.display = "inline";
-                    upwardArrowTile4.style.display = "none";
-                  }
-                }
-                else if(tileNumber == 5){
-                  if(downwardArrowTile5.style.display == "inline"){
-                    upwardArrowTile5.style.display = "inline";
-                    downwardArrowTile5.style.display = "none";
-                  }
-                  else if(downwardArrowTile5.style.display == "none"){
-                    downwardArrowTile5.style.display = "inline";
-                    upwardArrowTile5.style.display = "none";
-                  }
-                }
-                else if(tileNumber == 6){
-                  if(downwardArrowTile6.style.display == "inline"){
-                    upwardArrowTile6.style.display = "inline";
-                    downwardArrowTile6.style.display = "none";
-                  }
-                  else if(downwardArrowTile6.style.display == "none"){
-                    downwardArrowTile6.style.display = "inline";
-                    upwardArrowTile6.style.display = "none";
-                  }
-                }
-              }
-            </script>
-
+            
             <!-- CARD TILE 1 -->
             <button class="btn cardTileStyle" type="button" data-toggle="collapse" data-target="#cardTile1Subtitle" onclick="loadArrowIcon(1)">
               <p class="cardTileHeadingStyle">
                 PROGRAMMES, CAMPAIGNS AND SPECIALIZED UNITS
               </p>
-              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile1">
-              <img src="assets/images/otherRelatedSitesWebpages/upwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile1">                                                                                                                     
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile1">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile1">                                                                                                                     
             </button>
 
                 <!-- CARD TILE 1 - SUBTILE -->
@@ -418,8 +320,8 @@
               <p class="cardTileHeadingStyle">
                 OTHER LINKS
               </p>
-              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile2">
-              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile2"> 
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile2">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile2"> 
             </button>
 
                 <!-- CARD TILE 2 - SUBTILE -->
@@ -566,8 +468,8 @@
               <p class="cardTileHeadingStyle">
                 USEFUL SITES
               </p>
-              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile3">
-              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile3"> 
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile3">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile3"> 
             </button>
 
                 <!-- CARD TILE 3 - SUBTILE -->
@@ -623,8 +525,8 @@
               <p class="cardTileHeadingStyle">
                 HEALTH RELATED PROFESSIONAL COLLEGES
               </p>
-              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile4">
-              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile4"> 
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile4">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile4"> 
             </button>
 
                 <!-- CARD TILE 4 - SUBTILE -->
@@ -743,8 +645,8 @@
               <p class="cardTileHeadingStyle">
                 CORPORATIONS
               </p>
-              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile5">
-              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile5"> 
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile5">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile5"> 
             </button>
 
                 <!-- CARD TILE 5 - SUBTILE -->
@@ -772,8 +674,8 @@
               <p class="cardTileHeadingStyle">
                 PRESIDENTIAL SECRETARIAT
               </p>
-              <img src="assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile6">
-              <img src="assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile6"> 
+              <img src="../assets/images/otherRelatedSitesWebpage/downwardArrow.png" alt="Downward Arrow" width="50px" height="50px" class="cardTileDownwardArrow" style="display: inline;" id="downwardArrowTile6">
+              <img src="../assets/images/otherRelatedSitesWebpage/upwardArrow.png" alt="Upward Arrow" width="50px" height="50px" class="cardTileUpwardArrow" style="display: none;" id="upwardArrowTile6"> 
             </button>
 
                 <!-- CARD TILE 6 - SUBTILE -->
@@ -817,5 +719,107 @@
 
     <!-- MAIN CONTENT SECTION - End -->
 
+    <!-- 
+      Importing JS files necessary for bootstrap from localhost - 
+      Imported at the bottom for webpage content to load faster 
+    -->
+    <script src="../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+    </script>
+    <!-- CARD TILE ARROW ICON JAVASCRIPT FUNCTION -->
+    <script>
+      /* 
+        FUNCTION'S PURPOSE - 
+          Get the IDs of the arrow icon in each tile and depending on the tile number, if the upward arrow is hidden, 
+          this would be shown and the downward arrow will be hidden.
+          This will happen vise versa as well.
+      */
+      function loadArrowIcon(tileNumber){
+        var downwardArrowTile1 = document.getElementById("downwardArrowTile1");
+        var upwardArrowTile1 = document.getElementById("upwardArrowTile1");
+
+        var downwardArrowTile2 = document.getElementById("downwardArrowTile2");
+        var upwardArrowTile2 = document.getElementById("upwardArrowTile2");
+
+        var downwardArrowTile3 = document.getElementById("downwardArrowTile3");
+        var upwardArrowTile3 = document.getElementById("upwardArrowTile3");
+
+        var downwardArrowTile4 = document.getElementById("downwardArrowTile4");
+        var upwardArrowTile4 = document.getElementById("upwardArrowTile4");
+
+        var downwardArrowTile5 = document.getElementById("downwardArrowTile5");
+        var upwardArrowTile5 = document.getElementById("upwardArrowTile5");
+
+        var downwardArrowTile6 = document.getElementById("downwardArrowTile6");
+        var upwardArrowTile6 = document.getElementById("upwardArrowTile6");
+
+        if(tileNumber == 1){
+          if(downwardArrowTile1.style.display == "inline"){
+            upwardArrowTile1.style.display = "inline";
+            downwardArrowTile1.style.display = "none";
+          }
+          else if(downwardArrowTile1.style.display == "none"){
+            downwardArrowTile1.style.display = "inline";
+            upwardArrowTile1.style.display = "none";
+          }
+        }
+        else if(tileNumber == 2){
+          if(downwardArrowTile2.style.display == "inline"){
+            upwardArrowTile2.style.display = "inline";
+            downwardArrowTile2.style.display = "none";
+          }
+          else if(downwardArrowTile2.style.display == "none"){
+            downwardArrowTile2.style.display = "inline";
+            upwardArrowTile2.style.display = "none";
+          }
+        }
+        else if(tileNumber == 3){
+          if(downwardArrowTile3.style.display == "inline"){
+            upwardArrowTile3.style.display = "inline";
+            downwardArrowTile3.style.display = "none";
+          }
+          else if(downwardArrowTile3.style.display == "none"){
+            downwardArrowTile3.style.display = "inline";
+            upwardArrowTile3.style.display = "none";
+          }
+        }
+        else if(tileNumber == 4){
+          if(downwardArrowTile4.style.display == "inline"){
+            upwardArrowTile4.style.display = "inline";
+            downwardArrowTile4.style.display = "none";
+          }
+          else if(downwardArrowTile4.style.display == "none"){
+            downwardArrowTile4.style.display = "inline";
+            upwardArrowTile4.style.display = "none";
+          }
+        }
+        else if(tileNumber == 5){
+          if(downwardArrowTile5.style.display == "inline"){
+            upwardArrowTile5.style.display = "inline";
+            downwardArrowTile5.style.display = "none";
+          }
+          else if(downwardArrowTile5.style.display == "none"){
+            downwardArrowTile5.style.display = "inline";
+            upwardArrowTile5.style.display = "none";
+          }
+        }
+        else if(tileNumber == 6){
+          if(downwardArrowTile6.style.display == "inline"){
+            upwardArrowTile6.style.display = "inline";
+            downwardArrowTile6.style.display = "none";
+          }
+          else if(downwardArrowTile6.style.display == "none"){
+            downwardArrowTile6.style.display = "inline";
+            upwardArrowTile6.style.display = "none";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

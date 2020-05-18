@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Setting responsive viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ministry Of Health - Projects</title>
+
+    <!-- FAVICON ICON -->
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+    <!-- Importing google fonts from the internet -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <!-- Importing google icons from the internet -->  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Importing CSS files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <!-- Importing styles for default header and footer sections from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/defaultHeaderFooterStyles.css">
+  </head>
+  <body>
+    <!-- MAIN CONTENT SECTION - Begin -->
+      <!-- HEADER SECTION - Begin -->
+      <div id="header">
+        <div id="headerContent">
+          <div id="headerMenu">
+            <button class="languageSelection btn" id="languageSelectionEnglish">
+              <p>English</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionSinhala">
+              <p>සිංහල</p>
+            </button>
+            <button class="languageSelection btn" id="languageSelectionTamil">
+              <p>தமிழ்</p> 
+            </button>
+            <h1 id="mainTitle">MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h1>
+            <form>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+                <img src="../../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+              </button>
+            </form>
+          </div>
+          <div id="headerMenuBar">
+            <button class="menuItem btn" id="menuTileStyle">
+              <p>Wellbeing</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Lifestyle</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Travelers</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Notices</p>
+            </button>
+            <button class="menuItem menuItemOther btn" id="menuTileStyle">
+              <p>Contact</p>
+            </button>
+            <button class="menuItem btn" id="menuItemLogin">
+              <p>LOGIN</p>
+            </button>
+          </div>
+        </div>
+        <div id="headerBanner">
+          <h1>HEALTH ALERT</h1>
+          <p>Take precautions provided by Ministry of Health</p>
+        </div>
+      </div>
+      <!-- HEADER SECTION - End -->
+      
+      <!-- BODY SECTION - Begin -->
+      <div style="width: 100%;
+                  height: 700px;
+                  background-color: rgb(241, 241, 241);">
+        <!-- BODY CONTENT SECTION - CARD -->
+        <div style="width: 60%;
+                    height: 520px;
+                    background-color: #ffffff;
+                    position: relative;
+                    left: 50%;
+                    top: 50px;
+                    transform: translateX(-50%);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <!-- CARD HEADING -->
+          <h2 style="font-size: 25px;
+                    font-family: 'Karla', sans-serif;
+                    position: relative;
+                    left: 50px;
+                    top: 30px;"><b>Projects</b></h2>
+          <!-- HELP - MORE INFORMATION POPOVER -->
+          <button class="btn btn-light" style="border-radius: 25px;
+                                                      height: 40px;
+                                                      width: 40px;
+                                                      position: absolute;
+                                                      left: 95%;
+                                                      top: 10px;"
+          data-toggle="popover" data-trigger="hover" data-placement="top" title="HELP" 
+          data-content="WEBPAGE IS CLOSED DUE TO MAINTENANCE<br>
+                        APOLOGIES FOR THE INCONVENIENCE"
+          data-html="true">
+            <span class="material-icons" style="position: relative;
+                                                left: 50%;
+                                                transform: translateX(-50%);">
+              help
+            </span>
+          </button>
+
+          <p style="font-size: 20px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);">Area closed due to maintenance <br> Apologies for the inconvenience</p>
+        </div>
+      </div>
+      <!-- BODY SECTION - End -->
+
+      <!-- FOOTER SECTION - Begin -->
+      <div id="footer">
+        <h3>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</h3>
+      </div>
+      <!-- FOOTER SECTION - End -->
+
+    <!-- MAIN CONTENT SECTION - End -->
+
+    <!-- 
+      Importing JS files necessary for bootstrap from localhost - 
+      Imported at the bottom for webpage content to load faster 
+    -->
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+    </script>
+  </body>
+</html>

@@ -7,25 +7,18 @@
 
     <title>Ministry Of Health - Staff Access</title>
 
-    <!-- Importing styles for default header and footer sections -->
-    <link rel="stylesheet" type="text/css" href="./../assets/css/defaultHeaderFooterStyles.css">
-    <!-- Importing fontawesome from localhost -->
-    <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/font-awesome-v4.7.0/css/font-awesome.min.css">
-    <!-- Importing files necessary for bootstrap from localhost -->
-    <link rel="stylesheet" type="text/css" href="./../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
-    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
-    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
-    <script src="./../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
-    <!-- Importing google fonts from online -->
+    <!-- FAVICON ICON -->
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+    <!-- Importing google fonts from the internet -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Karla:wght@700&family=Lato&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <!-- Importing google icons from online -->
+    <!-- Importing google icons from the internet -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Page load alert box - staff access only -->
-    <script>
-      $(document).ready(function(){
-        alert('WEBPAGE ONLY FOR STAFF MEMBERS');
-      });
-    </script>
+    <!-- Importing fontawesome from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/externalLibraries/font-awesome-v4.7.0/css/font-awesome.min.css">
+    <!-- Importing CSS files necessary for bootstrap from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/externalLibraries/bootstrap-v4.4.1/css/bootstrap-4.4.1.css">
+    <!-- Importing styles for default header and footer sections from localhost -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/defaultHeaderFooterStyles.css">
   </head>
   <body>
     <!-- MAIN CONTENT SECTION - Begin -->
@@ -46,7 +39,7 @@
             <form>
               <input type="text" id="searchInput" class="form-control" placeholder="Search">
               <button type="submit" id="searchButton" class="btn">
-                <img src="./../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
+                <img src="../../assets/images/commonImages/searchIcon.png" alt="Search Icon" width="30px" height="30px">
               </button>
             </form>
           </div>
@@ -138,14 +131,6 @@
               help
             </span>
           </button>
-
-          <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
-          <script>
-            $(document).ready(function(){
-              $('[data-toggle="popover"]').popover();   
-            });
-          </script>
-
 
           <!-- CSS GRID STYLE - TILES STYLES -->
           <style>
@@ -988,5 +973,24 @@
 
     <!-- MAIN CONTENT SECTION - End -->
 
+    <!-- 
+      Importing JS files necessary for bootstrap from localhost - 
+      Imported at the bottom for webpage content to load faster 
+    -->
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/jquery.min.js"></script>
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/popper.min.js"></script>
+    <script src="../../assets/externalLibraries/bootstrap-v4.4.1/js/bootstrap.min.js"></script>
+    <!-- Page load alert box - staff access only -->
+    <script>
+      $(document).ready(function(){
+        alert('WEBPAGE AUTHORIZED ONLY FOR STAFF MEMBERS');
+      });
+    </script>
+    <!-- JAVASCRIPT TO TOGGLE BOOTSTRAP POPOVER -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+    </script>
   </body>
 </html>
