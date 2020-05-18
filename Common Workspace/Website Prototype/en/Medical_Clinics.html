@@ -1,0 +1,387 @@
+<script src="../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+
+<script>
+jQuery(function($)
+ { 
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCFfCdAIhkH0DXw5RqBXx2vasksmR_5bOc&callback=initialize";
+    document.body.appendChild(script);
+});
+
+function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        mapTypeId: 'roadmap'
+    };
+                    
+    map = new google.maps.Map(document.getElementById("clinics"), mapOptions);
+    map.setTilt(45);
+        
+    var markers = [
+        ['Madi Clinic', 6.878205, 79.860067],
+        ['Family Medical Clinic', 6.884187, 79.907814],
+        ['Modaravila Medical Clinic', 6.703382, 79.917207],
+        ['Kawdana Medical Center', 6.847654, 79.868466],
+        ['Medical Center - Wata Mawatha', 6.803954, 79.923071],
+        ['Abhaya Medical Center', 6.797644, 79.911404 ],
+        ['Arogya Family Medical Centre', 6.781599, 79.883952],
+        ['Ayurvedic Clinic', 6.774372, 79.880111 ],
+        ['Twinkle Poly Clinic', 6.759873, 79.898952 ],
+        ['Rividevgama Maternal And Child Health Clinic', 6.758048, 79.908977],
+        ['Venus Clinic', 6.750420, 79.907583],
+        ['Suwa Shanthi Medical Centre', 6.729267, 79.924543],
+        ['KM Medical Center', 6.707092, 79.944114 ],
+        ['Wellness Medi Clinic', 6.792870, 79.888969 ],
+        ['Child And Maternity Clinic Medical Centre Ratmalana', 6.824374, 79.872253],
+        
+    ];
+                        
+    // Info Window Content
+    var infoWindowContent = [
+        ['<div class="info_content">' +
+        '<h3>Madi Clinic</h3>' +
+        '<p>Madi Clinic is one of the best medical clinics in the area, They are knowwn to provide a good medical service to the patients who attend to the clinic, with there vission and mission they aim to he help the medical conditions of the country</p>' + '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Family Medical Clinic</h3>' +
+        '<p> The Family medical clinic has been a great assets to the people in the area, It is known to have a good service and has with sufficient equipment to treat the patients who attend to this clinic</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Modaravila Medical Clinic</h3>' +
+        '<p>Modaravila Medical Clinic is of the best clinics in the area and has become patients usual clinic because of the good and experinced staff helping the patients who attend here.</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Kawdana Medical Center</h3>' +
+        '<p>Kawdana Medical Center is of the best clinics in the area and has become a great asset to the people in the area. They are known to provide a good service eventhough they do not have enough eqipment they managed to provide quality service.</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Medical Center - Wata Mawatha</h3>' +
+        '<p>This Medical Center is one of the well known clinics in the area and has experinced staff working to achieve their objective of treating all the the people who atttend to the clinic. </p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Abhaya Medical Center</h3>' +
+        '<p> The Abhaya Medical Center is known to be one of the great clinics in the area, It is known to have a great service and they also contain sufficient equipment to treat the patients who come to this clinic/p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Arogya Family Medical Centre</h3>' +
+        '<p>The Arogya Family Medical Centre is known to be one of the well know clinics in the area, It has all the modern equipment to help patients and is aso known to have a experince staff working here</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Ayurvedic Clinic</h3>' +
+        '<p>Ayurvedic Clinic is one of the best medical clinics in the area they focus on Ayurvedic medications, They are knowwn to provide a good medical service to the patients who attend to the clinic, with there vission and mission they aim to he help the medical conditions of the country</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Twinkle Poly Clinic</h3>' +
+        '<p> The Twinkle Poly Clinic has been a great assets, It is known to have a good service and has with sufficient equipment to treat the patients who attend to this clinic</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Rividevgama Maternal And Child Health Clinic</h3>' +
+        '<p>Rividevgama Maternal And Child Health Clinic is providing a good service to the people in the area eventhough they do noe have sufficient equipment they are managing with the equipment they have and providing a quality service.</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Venus Clinic</h3>' +
+        '<p>Venus Clinic is of the best clinics in the area and has become a great asset to the people in the area. They are known to provide a good service and is one of the crowded clinics because of this.</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Suwa Shanthi Medical Centre</h3>' +
+        '<p>Suwa Shanthi Medical Centre is one of the best medical clinics in the area, They are knowwn to provide a good medical service to the patients who attend to the clinic. The service is known to be good mainly because of the experinced staff working there.</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>KM Medical Center</h3>' +
+        '<p> The KM Medical Center has been a great assets to the people in the area and is one of the best clinics in the area, It is known to have a experinced staff and has sufficient equipment to treat the patients.</p>' +
+        '</div>'], 
+        ['<div class="info_content">' +
+        '<h3>Wellness Medi Clinic</h3>' +
+        '<p>Wellness Medi Clinic is one of the well known clinics in the area and is one of the most crowded clinics because of the experinced staff and good medical service they are known to provide to the people in the area</p>' +
+        '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Child And Maternity Clinic Medical Centre Ratmalana</h3>' +
+        '<p>Child And Maternity Clinic in Ratmalana is one of the main clinics in the area that provides clinic facility to children and pregnant women. There are known to provide a good service thannks to the experinced staff that is working in the clinic</p>' +
+        '</div>']
+    ];
+        
+    // Display multiple markers on a map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    
+    // Loop through our array of markers & place each one on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+        });
+        
+        // Allow each marker to have an info window    
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Automatically center the map fitting all markers on the screen
+        map.fitBounds(bounds);
+    }
+
+    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(10);
+        google.maps.event.removeListener(boundsListener);
+    });
+    
+}
+</script>
+<html>
+<head>
+	<title> Medical Clinics </title>
+		<link rel="stylesheet" type="text/css" href="  ../assets/css/bootstrap-4.4.1.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .sidebar {
+ 
+            width: 200px;
+            background-color: #f1f1f1;
+            position: absolute;
+            height: 100%;
+            overflow: auto;
+            text-align: center;
+           }
+
+           .sidebar a {
+           display: block;
+           color: black;
+           text-decoration: none;
+           }
+ 
+           .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+
+            div.content {
+             margin-left: 200px;
+             }
+
+            .checked {
+             color: orange;
+            }
+
+           @media screen and (max-width: 700px) {
+           .sidebar {
+           width: 100%;
+           height: auto;
+           position: relative;
+           }
+           .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+           }
+
+           @media screen and (max-width: 400px) {
+           .sidebar a {
+           text-align: center;
+           float: none;
+           }
+           }
+        </style>
+</head>
+<body>
+     <div style="background-color: #136aee;">
+        <div class="btn-group btn-group-sm float-right align-items-start" role="group">
+          <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">English</button>
+              <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">සිංහල</button>
+            <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">தமிழ்</button>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-sm-8">
+         <label class="d-inline-flex" style="margin: 37px;background-color: #ffffff;padding: 3px;height: 48px;margin-top: 39px;margin-bottom: 15px;width: 752px;font-size: 25px;color: rgb(4,118,231);"><strong>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</strong>
+        </label></div>
+         <div class="col-sm-4">
+           <form style="padding-top: 50px; padding-left; 50px">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+              </button>
+          </form>
+         </div>
+          </div>     
+        <div class="btn-group d-block" role="group" style="margin: 14px;margin-top: 0px;margin-left: 20px;margin-bottom: 9px;">
+          <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;">
+              <strong>Lifestyle</strong><br></button>
+              <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Travelers</strong><br></button>
+            <button
+                class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Notices</strong><br></button>
+                <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Contact</strong><br></button>
+                <button class="btn btn-primary float-right" type="button" style="margin-left: 4px;margin-right: 25px;width: 89px;background-color: rgb(13,53,96);">Login</button>
+                <button
+                    class="btn btn-primary float-left" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Wellbeing</strong><br>
+                </button>
+    </div>
+    </div>
+    <div style="background-color:#f4eb12;">
+      <label class="d-inline-flex" style="margin: 0px;background-color: #f4eb12;padding: 0px;height: 48px;margin-top: -9px;margin-bottom: 1px;width: 100%;font-size: 25px;padding-top: 1px;">
+      <strong>&nbsp; &nbsp; &nbsp; Health Alert</strong></label> <label  class="d-inline-flex" style="margin: 0px;background-color: #f4eb12;padding-right: 100px ;height: 48px;margin-bottom: 1px;width: 100%;font-size: 16px;padding-top: 1px"> &nbsp; &nbsp; &nbsp;Take precautions provided by the Ministry Of Health</label> <br> <br></div>
+      <br>
+<div>
+	<h2 class=" pb-5 pt-5 w-100" style=" text-align: center; background-color: lightblue;"> Medical Clinics </h2>
+</div>
+<div class="sidebar">
+    <div>
+        <button class="btn" onclick=""><h6>Madi Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn" onclick=""><h6>Family Medical Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn "><h6>Modaravila Medical Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn "><h6>Kawdana Medical Center</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+         <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn "><h6>Medical Center - Wata Mawatha</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+         <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Abhaya Medical Center</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+         <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Arogya Family Medical Centre</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Ayurvedic Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Twinkle Poly Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Rividevgama Maternal And Child Health Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Venus Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Suwa Shanthi Medical Centre</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>KM Medical Center</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Wellness Medi Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>Child And Maternity Clinic Medical Centre Ratmalana</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+</div>
+<div class=" content">
+  <div id="clinics" class="mapping" style="width:100%;height:100%;">
+    </div>
+</div>
+</body>
+</html>

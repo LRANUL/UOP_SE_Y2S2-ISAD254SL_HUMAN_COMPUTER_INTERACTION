@@ -1,0 +1,250 @@
+
+<script src="../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+
+
+<script>
+jQuery(function($)
+ { 
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCFfCdAIhkH0DXw5RqBXx2vasksmR_5bOc&callback=initialize";
+    document.body.appendChild(script);
+});
+
+function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        mapTypeId: 'roadmap'
+    };
+                    
+    map = new google.maps.Map(document.getElementById("clinics"), mapOptions);
+    map.setTilt(45);
+        
+    var markers = [
+        ['Maternity And Pediatric Care Clinic', 6.817971,79.972304],
+        ['Child Eye (Pvt) Ltd', 6.908527,79.897921],
+        ['Blue Cross Medical Centre (Pvt) Ltd', 6.910832,79.891716],
+        ['Healthy Life Clinic', 6.906809,79.853928],
+        ['CIRP Life Center', 6.892569,79.854872],
+        ['The Kids Clinic', 6.884860,79.878830],
+
+    ];
+                        
+    // Info Window Content
+    var infoWindowContent = [
+        ['<div class="info_content">' +
+        '<h3>Maternity And Pediatric Care Clinic</h3>' +
+        '<p>The Maternity And Pediatric Care Clinic is one of the best clinics in the area and is able to help a lot off people in the area of Polgasowita. This clinic has been peoples choice for clinic purposes because its known to have a good service and experienced staff</p>' + '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Child Eye (Pvt) Ltd</h3>' +
+        '<p> Child Eye is a well known clinic in the country its know to have a good service, experienced staff and modern equipment due to this the child eye clinic very well know and is preffered by the people. </p>' +'</div>'],
+         ['<div class="info_content">' +
+        '<h3>Blue Cross Medical Centre (Pvt) Ltd</h3>' +
+        '<p>Blue Cross Medical Centre has been serving the community health care needs since its establishment in 1997. Blue Cross Medical Centre has a reputation for continuously investing in its infrastructure to offer patients the very latest & best in medical care.</p>' + '</div>'],
+         ['<div class="info_content">' +
+        '<h3>Healthy Life Clinic</h3>' +
+        '<p> Healthy Life Clinic located in Colombo is one of the good clinics in the area and has a good reputation for providing a great medical service. Inaddition they have the equipment required to help the patients with there medical condition.</p>' + '</div>'],
+         ['<div class="info_content">' +
+        '<h3>CIRP Life Center</h3>' +
+        '<p>CIRP life center is one of the well known clinics in the area of of colombo and has help a lot of people in the area. This clinic is prefered by the people because of the good service they provide and the equipment they have.</p>' + '</div>'],
+        ['<div class="info_content">' +
+        '<h3>The Kids Clinic</h3>' +
+        '<p>The Kids Clinic is one of the best children clinic centers in colombo. This clinic is known to have a caring staff and a good medical service along with sufficent equipment to treat the patients who come to this clinic.</p>' +'</div>']
+    ];
+        
+    // Display multiple markers on a map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    
+    // Loop through our array of markers & place each one on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+        });
+        
+        // Allow each marker to have an info window    
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Automatically center the map fitting all markers on the screen
+        map.fitBounds(bounds);
+    }
+
+    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(10);
+        google.maps.event.removeListener(boundsListener);
+    });
+    
+}
+</script>
+<html>
+<head>
+	<title>pediatric clinics </title>
+		<link rel="stylesheet" type="text/css" href="  ../assets/css/bootstrap-4.4.1.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .sidebar {
+ 
+            width: 200px;
+            background-color: #f1f1f1;
+            position: absolute;
+            height: auto;
+            overflow: auto;
+            text-align: center;
+           }
+
+           .sidebar a {
+           display: block;
+           color: black;
+           text-decoration: none;
+           }
+ 
+           .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+            }
+
+
+            div.content {
+             margin-left: 200px;
+             }
+
+            .checked {
+             color: orange;
+            }
+
+           @media screen and (max-width: 700px) {
+           .sidebar {
+           width: 100%;
+           height: auto;
+           position: relative;
+           }
+           .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+           }
+
+           @media screen and (max-width: 400px) {
+           .sidebar a {
+           text-align: center;
+           float: none;
+           }
+           }
+        </style>
+</head>
+<body>
+     <div style="background-color: #136aee;">
+        <div class="btn-group btn-group-sm float-right align-items-start" role="group">
+          <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">English</button>
+              <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">සිංහල</button>
+            <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">தமிழ்</button>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-sm-8">
+         <label class="d-inline-flex" style="margin: 37px;background-color: #ffffff;padding: 3px;height: 48px;margin-top: 39px;margin-bottom: 15px;width: 752px;font-size: 25px;color: rgb(4,118,231);"><strong>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</strong>
+        </label></div>
+         <div class="col-sm-4">
+           <form style="padding-top: 50px; padding-left; 50px">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+              </button>
+          </form>
+         </div>
+          </div>     
+        <div class="btn-group d-block" role="group" style="margin: 14px;margin-top: 0px;margin-left: 20px;margin-bottom: 9px;">
+          <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;">
+              <strong>Lifestyle</strong><br></button>
+              <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Travelers</strong><br></button>
+            <button
+                class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Notices</strong><br></button>
+                <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Contact</strong><br></button>
+                <button class="btn btn-primary float-right" type="button" style="margin-left: 4px;margin-right: 25px;width: 89px;background-color: rgb(13,53,96);">Login</button>
+                <button
+                    class="btn btn-primary float-left" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Wellbeing</strong><br>
+                </button>
+    </div>
+    </div>
+    <div style="background-color:#f4eb12;">
+      <label class="d-inline-flex" style="margin: 0px;background-color: #f4eb12;padding: 0px;height: 48px;margin-top: -9px;margin-bottom: 1px;width: 100%;font-size: 25px;padding-top: 1px;">
+      <strong>&nbsp; &nbsp; &nbsp; Health Alert</strong></label> <label  class="d-inline-flex" style="margin: 0px;background-color: #f4eb12;padding-right: 100px ;height: 48px;margin-bottom: 1px;width: 100%;font-size: 16px;padding-top: 1px"> &nbsp; &nbsp; &nbsp;Take precautions provided by the Ministry Of Health</label> <br> <br></div>
+      <br>
+<div>
+	<h2 class=" pb-3 pt-3 w-100" style=" text-align: center; background-color: lightblue;"> pediatric clinics</h2>
+</div>
+<div class="sidebar">
+    <div>
+        <button class="btn" onclick=""><h6>Maternity And Pediatric Care Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn" onclick=""><h6>Child Eye (Pvt) Ltd</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn "><h6>Blue Cross Medical Centre (Pvt) Ltd</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn "><h6>Healthy Life Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+         <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn "><h6>CIRP Life Center</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+         <span class="fa fa-star"></span></p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn"><h6>The Kids Clinic</h6></button>
+        <p>Ratings <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></p>
+    </div>
+</div>
+<div class=" content">
+  <div id="clinics" class="mapping" style="width:100%;height:80%;">
+    </div>
+</div>
+</body>
+</html>
+

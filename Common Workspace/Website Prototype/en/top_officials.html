@@ -1,0 +1,376 @@
+<html>
+<head>
+	<title> Top officials</title>
+	 <link rel="stylesheet" type="text/css" href=" ../assets/css/bootstrap-4.4.1.css">
+
+<style>
+.mySlides {display: none;}
+
+
+.slideshow-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+</style>
+
+</head>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function nextSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<body>
+   <div style="background-color: #136aee;">
+        <div class="btn-group btn-group-sm float-right align-items-start" role="group">
+          <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">English</button>
+              <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">සිංහල</button>
+            <button class="btn btn-primary btn-sm text-primary bg-light" type="button" style="padding: 2px;margin: 9px;">தமிழ்</button>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-sm-8">
+         <label class="d-inline-flex" style="margin: 37px;background-color: #ffffff;padding: 3px;height: 48px;margin-top: 39px;margin-bottom: 15px;width: 752px;font-size: 25px;color: rgb(4,118,231);"><strong>MINISTRY OF HEALTH AND INDIGENOUS MEDICAL SERVICES</strong>
+        </label></div>
+         <div class="col-sm-4">
+           <form style="padding-top: 50px; padding-left; 50px">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search">
+              <button type="submit" id="searchButton" class="btn">
+              </button>
+          </form>
+         </div>
+          </div>     
+        <div class="btn-group d-block" role="group" style="margin: 14px;margin-top: 0px;margin-left: 20px;margin-bottom: 9px;">
+          <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;">
+              <strong>Lifestyle</strong><br></button>
+              <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Travelers</strong><br></button>
+            <button
+                class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Notices</strong><br></button>
+                <button class="btn btn-primary" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Contact</strong><br></button>
+                <button class="btn btn-primary float-right" type="button" style="margin-left: 4px;margin-right: 25px;width: 89px;background-color: rgb(13,53,96);">Login</button>
+                <button
+                    class="btn btn-primary float-left" type="button" style="margin-left: 4px;margin-right: 13px;width: 123px;"><strong>Wellbeing</strong><br>
+                </button>
+    </div>
+    </div>
+    <div style="background-color:#f4eb12;">
+      <label class="d-inline-flex" style="margin: 0px;background-color: #f4eb12;padding: 0px;height: 48px;margin-top: -9px;margin-bottom: 1px;width: 100%;font-size: 25px;padding-top: 1px;">
+      <strong>&nbsp; &nbsp; &nbsp; Health Alert</strong></label> <label  class="d-inline-flex" style="margin: 0px;background-color: #f4eb12;padding-right: 100px ;height: 48px;margin-bottom: 1px;width: 100%;font-size: 16px;padding-top: 1px"> &nbsp; &nbsp; &nbsp;Take precautions provided by the Ministry Of Health</label> <br> <br></div>
+      <br>
+    <div>
+    	<img src="../assets/images/aboutus.jpeg" style=" width: 100%; height: 210px;">
+    </div>
+    <div class=" MR-5 ML-5">
+    <div class="d-flex justify-content-around pb-3 pt-3">
+		<div>
+			<a  class=" btn btn-outline-info" role="button" href="./history.html"> History & Contacts</a>
+		</div>
+		<div style=" background-color: rgb(50, 138, 254);">
+			<a  class=" btn btn-outline-info" role="button" href="./top_officials.html" style=" color: white;"> Top officials</a>
+		</div>
+		<div>
+		<a  class=" btn btn-outline-info" role="button" href="./mission&vision.html" > Mission & Vission</a>
+		</div>
+		<div>
+			<a  class=" btn btn-outline-info" role="button" href="./pdhs.html" > PDHS</a>
+		</div>
+		<div>
+			<a  class=" btn btn-outline-info" role="button" href="./rdhs.html"> RDHS</a>
+		</div>
+    <div>
+      <a  class=" btn btn-outline-info" role="button" href="teaching_schools.html"> Nurses Teaching Schools</a>
+    </div>
+     </div>
+     <div>
+     	<h2> Minister Of Health and indigenous Medical Services</h2>
+      <div class=" d-flex justify-content-start">
+     	<div class=" PR-3">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Hon. Pavithra Wanniarachchi</p>
+      </div>
+    </div>
+     </div>
+     <div class=" PT-5">
+     	<h2> Director General of Health Services</h2>
+     	<div class=" d-flex justify-content-start">
+     		<div class=" PR-4">
+     		   <img src="../assets/images/profile.png" class="img-thumbnail pr-2">
+            <p style=" text-align: center;"> Name: Dr. Anil Jasinghe</p>
+     	    </div>
+     	</div>
+     </div>
+      <div  class=" PT-5">
+     	<h2> Deputy Director Generals of Health Services & Chief Finance Officer</h2>
+     	<div>
+     		<div class="slideshow-container">
+
+              <div class="mySlides">
+               <div class="d-flex justify-content-around">
+                  <div>
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. P.W.C.L Panapitiya </p>
+                  </div>
+                  <div>
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Amal Harsha de Silva </p>
+                  </div>
+                  <div>
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Paba Palihawadana</p>
+                  </div>
+                  <div>
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Mrs.H.S.R.Perera </p>
+                  </div>
+                  <div>
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. S. Sridharan</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Mrs. H.Sriyani Fernando</p>
+                  </div>
+                 </div>
+              </div>
+
+              <div class="mySlides">
+              <div class="d-flex justify-content-around">
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr. B.V.S.H. Benaragama</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr.Mrs.S.C.Wickramasinghe </p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr.Sudath Samaraweera </p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr.Kumara Wickramasinghe </p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr. L.T. Gamlath</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Mrs. D.C. Wickramasena</p>
+                  </div>
+                 </div>
+              </div>
+
+              <div class="mySlides">
+               <div class="d-flex justify-content-around">
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr.T.B. Ananda Jayalal</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr. D. R. K. Herath.</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Mrs. M.T.R.C. Chithralatha</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Mr. S.A.J. Karunathilake</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Mrs. H.Sriyani Fernando</p>
+                  </div>
+                  <div>
+                  <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                  <p style=" text-align: center;"> Name: Dr.Kumara Wickramasinghe</p>
+                  </div>
+                 </div>
+              </div>
+                <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+                <a class="next" onclick="nextSlide(1)">&#10095;</a>
+            </div>
+     	</div>
+     	<br>
+     </div>
+      <div  class=" PT-5">
+     	<h2> Directors (Programmers and Campaigns)</h2>
+
+       <div class=" d-flex justify-content-start">
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr.Sudath Samaraweera </p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Devika Mendis </p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. C. Aluthweera </p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Jayaruwan Bandara</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Palitha Karunaperm</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. A. Ajith Priyadarshana</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. L.E Kithsiri</p>
+                  </div>
+      </div>
+    </div> 
+     <div  class=" PT-5">
+     	<h2> Senior Assistant Secretaries</h2>
+          <div class=" d-flex justify-content-start">
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr. M.B.L. Rahuman </p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr. K.P. Yogachandra</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr. Sudath Rathnaweera</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mrs. S.M.L.P. Kumari </p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr. P.P.S.R. de Silva</p>
+                  </div>
+                   <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mrs. L.A.G Kaushalya Jayasingha</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mrs. Mrs. R.G.D. Priyadarshanie</p>
+                  </div>
+                 </div>
+    </div>
+      <div>
+      <h2> Additional Secretaries</h2>
+      <div class=" d-flex justify-content-start">
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. A.K.S. de Alwis </p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mrs. A.M.K.K. Attanayake</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr. S. Janaka Sri Chandraguptha</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mrs. K. Gunawardana</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr. Y.L.M. Nawavi</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Mr M.R.H. Swarnathilaka</p>
+                  </div>
+      </div>
+     </div>
+     <div class="PT-5">
+     	<h2> Directors (Head Office)</h2>
+        <div class=" d-flex justify-content-start">
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name:  Dr. Mrs. E.A. Fernando</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr. Anil Samaranayake</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr.A.G.Ludowyke</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr Thilini Wanigasekara</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr Wajira Nanayakkara</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr Subaskaran</p>
+                  </div>
+                  <div class=" PR-4">
+                    <img class="img-thumbnail pr-2" src="../assets/images/profile.png">
+                    <p style=" text-align: center;"> Name: Dr P.H Wijenayaka</p>
+                  </div>
+     	</div>
+     </div>
+     </div>
+
+<script src="../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+</body>
+</html>
